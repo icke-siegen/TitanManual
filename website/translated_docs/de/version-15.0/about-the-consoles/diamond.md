@@ -2,89 +2,89 @@
 id: version-15.0-diamond
 title: Diamond 9
 sidebar_label: Diamond 9
-description: Diamond 9 - console design and features
+description: Diamond 9 - Design und Eigenschaften
 original_id: diamond
 ---
 
 ![Diamond9](/docs/images/Diamond-Main.png)
 
-The Diamond 9 has the following main control areas. There are two models, the 
-D9-330 as shown and the compact D9-215 which has two main touchscreens and
-fewer playback faders:
+Die wesentlichen Bereiches des Diamond 9 werden hier beschrieben. Dabei gibt
+es zwei Modelle: das hier abgebildete D9-330, sowie das kompaktere D9-215 mit 
+nur zwei Haupt-Displays und weniger Fadern:
 
-\(A\) The three main **Touch screens** (two on D9-215) contain fixture, palette and group select
-buttons. At the bottom of the right-hand screen, the current wheel assignments
-are shown along with legends for the 15 Macro Keys. At the top and bottom of
-the left-hand screen(s), handle legends for the main faders and encoders are shown.
+\(A\) Die drei **Haupt-Displays** (zwei beim D9-215) zeigen die gewohnten 
+Arbeitsfenster mit Buttons etwa für Geräte, Paletten oder Gruppen. Auf dem rechten
+Touchscreen werden unten die Funktionen der Wheels sowie der 15 Macro-Tasten
+angezeigt. Auf dem bzw. den linken Touchscreen(s) werden unten und oben die 
+Legenden der Fader und Encoder gezeigt.
 
-\(B\) The **Playback faders** and **Rotary playback faders**
- select and control cues, cue lists and chases, and other configurable functions.
- (D9-215 only has the right hand set of faders).
+\(B\) Die **Playback-Fader** und **Playback-Encoder**
+dienen zum Anwählen und Steuern von Cues, Chasern, Cuelisten und anderen
+Funktionen (auf dem D9-215 gibt es nur die rechte Gruppe an Fadern).
 
-\(C\) The **System Prompt and Menu Softkeys** have their own touchscreen.
+\(C\) **Dialogbereich und Menü** haben einen eigenen Touchscreen.
 
-\(D\) The **Programming and setup controls** configure and program the console,
-within which the **editor touchscreen** shows and sets fixture attributes and 
-the **macro/executor buttons** are playback buttons allowing storage of cues or
-chases, frequent key sequences, screen layouts or groups. To the left of these
-controls are the cue list playback controls and the Scene Master T-bar.
+\(D\) Die **Programmiersektion** dient zum eigentlichen Programmieren und 
+Steuern des Pultes, dabei werden auf dem **Editor-Touchscreen** stets die 
+Geräteattribute angezeigt. Die **Macro-/Executortasten** dienen sowohl als 
+weitere Playbacktasten als auch zum Speichern z.B. häufig benutzter Tastenfolgen,
+von Bildschirm-Layouts, von Gerätegruppen oder anderen Elementen. Links davon
+befinden sich die Steuerelemente für Cuelisten und der T-Griff-Fader für den 
+Szenenmaster.
 
-\(E\) Three **Layer screens** are provided for monitoring
-video feeds via NDI, or for additional workspace window touch screens.
+\(E\) Drei **Vorschau-Bildschirme** dienen etwa zur Anzeige verschiedener
+Video-Layer per NDI, können aber auch weitere Arbeitsfenster aufnehmen.
 
 
-
-## Touch screen controls
+## Die Touchscreens
 
 ![Diamond-F-G](/docs/images/Diamond-F.png)
 
-\(F\) The **Workspace windows** on the touch screens contain a user-configurable
-layout of touch buttons for fixtures, palettes, groups, playbacks, macros and more.
-You can also show the integrated Capture visualiser, video feed monitors or a range
-of information screens such as intensity levels or DMX output levels.
+\(F\) Die **Arbeitsfenster** zeigen weitgehend frei konfigurierbar verschiedenste
+Schaltflächen zur Auswahl etwa von Geräten, Gruppen, Paletten, Playbacks, Macros 
+und mehr. Auch der integrierte Capture-Visualiser, Video-Vorschaufenster und eine 
+Reihe von Fenstern zur Anzeige sonstiger Informationen und Systemparameter können 
+auf den Displays angezeigt werden.
 
-\(G\) The **System Prompt and Menu Softkeys** screen is the nerve centre of
-the console and shows you what is going on. This display contains touch
-buttons for the main menu which change depending on what the console
-is doing. Softkey commands are shown in the manual 
-like this: \[Edit Times\]
+\(G\) Der **Dialogbereich und die Menü-Buttons** sind die Schaltzentrale des Pultes
+und zeigen genau an, in welchem Menü man sich gerade befindet oder was das Pult für 
+Eingaben erwartet. Auch das eigentliche Hauptmenü wird über die Menü-Buttons 
+realisiert. Menüaufrufe sind in diesem Handbuch als blaues Rechteck wie folgt kenntlich gemacht: \[Edit Times\].
 
 ## Playbacks
 
 ![Diamond-H](/docs/images/Diamond-H.png)
 
-\(H\) The **Rotary Faders** at the top can be used to store
-a range of program functions including cues, chases, and fixture groups.
-The rotary faders have a level indicator around them which is shown in
-a user-configurable colour (halo colour).
-The touch screen below the faders shows legends indicating their function.
-There are additional rotary faders down the sides of the left and right touchscreens.
+\(H\) Die **Drehregler (Encoder)** oben auf dem Pult dienen zum Speichern von
+Cues, Chasern oder auch Gerätegruppen. Sie verfügen jeweils über eine Pegelanzeige,
+die Farbe kann getrennt eingestellt werden (Halo). Die jeweilige Funktion jedes 
+Reglers wird darunter im Bildschirm angezeigt. Am rechten und linken Rand des Pultes 
+befinden sich neben den Displays jeweils weitere fünf solche Drehregler.
 
-\(I\) The **Page Select buttons** in the
-centre of the faders let you change the left or right fader banks to a different page.
+\(I\) Die **Tasten zur Seitenumschaltung** in der Mitte der Fader dienen zum 
+Umschalten der Faderbänke auf verschiedene Seiten.
 
-\(J\) Two more sets of **Rotary Faders** are provided above the Playback Faders.
+\(J\) Zwei weitere Reihen **Drehregler (Encoder)** befinden sich über den unteren Fadern.
 
-\(K\) The motorised **Playback faders** are the main place to store and play back cues or chases
-but can also be assigned a range of other functions. Each fader has a level indicator
-which can be set to a user-configurable halo colour.
-The touch screen above the faders shows information about
-each playback.
+\(K\) Die motorisierten  **Playback-Fader** sind die wichtigsten Plätze zum Speichern
+von Playbacks - Cues, Cuelisten, Chaser -, können aber auch für andere Funktionen 
+dienen. Auch diese Fader haben jeweils eine Pegelanzeige, deren Farbe als Halo 
+einstellbar ist. Auch die Belegung der Playback-Fader wird im Bildschirm darüber angezeigt.
 
-\(L\) The **Page Select buttons** let you change the left or right
-fader banks to a different page
-of playbacks (for both the playback faders and the lower rotary faders). 
+\(L\) Die **Tasten zur Seitenumschaltung** in der Mitte der Fader dienen zum 
+Umschalten der Faderbänke (sowohl Motorfader als auch Drehregler) auf verschiedene
+Seiten.
 
-\(M\) The **Macro Buttons** store playbacks or frequently used sequences of keypresses
-which can be replayed with a single button press. The display immediately above the buttons shows legends for
-the buttons. There is a smaller bank of 6 buttons between the playback faders with
-their own legend screen.
+\(M\) Die **Macro-/Executortasten** dienen sowohl als weitere Playbacktasten als 
+auch zum Speichern z.B. häufig benutzter Tastenfolgen, die dann mit einem 
+Tastendruck abgerufen werden können. Im Bildschirm direkt darüber werden die 
+Legenden angezeigt. Außerdem gibt es einen weiteren Bereich von sechs Tasten mit
+eigens dafür vorgesehenem Display.
 
-\(N\) The **Playback controls** are used to control the playback of cue
-lists and include a T-bar with display for the Scene Master function and 
-a motorised fader pair in the Sequence Control Section to control the 
-connected playback/master.
-
+\(N\) Die **Hauptfader** dienen zum Steuern von Cuelisten; mit dem T-Griff-Regler
+wird der Szenenmaster gesteuert, die beiden Motorfader daneben mit den Tasten
+zur Ablaufsteuerung dienen vor allem zum Steuern von Cuelisten.
+$$$
 ## Programming controls
 
 ![Diamond-N](/docs/images/Diamond-O.png)

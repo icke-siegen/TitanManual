@@ -1,5 +1,5 @@
 ---
-id: version-14.0-arena
+id: version-15.0-arena
 title: Arena
 sidebar_label: Arena
 original_id: arena
@@ -21,8 +21,9 @@ programmiert werden, aber auch Geräte gepatcht werden können.
 
 \(D\) Das **kleine Display** bietet ebenfalls Platz für Arbeitsfenster. Auf
 den vier Encodern daneben können z.B. Master komfortabel programmiert
-werden. Auf den \(E\) **Macrotasten** darunter können häufig benutzte
-Tastenfolgen gespeichert werden.
+werden. Auf den \(E\) **Macrotasten** darunter können sowohl Playbacks als auch 
+häufig benutzte Tastenfolgen gespeichert und durch einen einzigen Tastendruck 
+abgerufen werden.
 
 \(F\) Die **Programmiersektion** enthält alle Steuerelemente zum Einrichten
 und Programmieren des Pultes.
@@ -52,9 +53,9 @@ bieten sich insbesondere für Master an. Die Encoder sind gleichzeitig
 Drucktaster; zum Auswählen beim Programmieren müssen sie gedrückt
 werden.
 
-\(L\) Auf den **Makro-Tastern** lassen sich häufig benutzte Abläufe von
-Tastendrücken abspeichern, und dann mit einem einzigen Tastendruck
-abrufen. Ebenso können hier Cues abgelegt werden.
+\(L\) Auf den **Makro-Tastern** lassen sich sowohl Playbacks als auch häufig
+benutzte Abläufe von Tastendrücken abspeichern, und dann mit einem einzigen
+Tastendruck abrufen.
 
 ![Arena controls 2](/docs/images/Arena-controls-2.png)
 
