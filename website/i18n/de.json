@@ -13,6 +13,10 @@
         "title": "Das Arena",
         "sidebar_label": "Das Arena"
       },
+      "about-the-consoles/diamond": {
+        "title": "Das Diamond 9",
+        "sidebar_label": "Das Diamond 9"
+      },
       "about-the-consoles/fader-wings": {
         "title": "Fader Wings",
         "sidebar_label": "Fader Wings"
@@ -101,13 +105,13 @@
         "title": "Weitere Optionen",
         "sidebar_label": "Weitere Optionen"
       },
+      "controlling-fixtures/changing-fixture-attributes": {
+        "title": "Geräte und Attribute einstellen",
+        "sidebar_label": "Geräte und Attribute einstellen"
+      },
       "controlling-fixtures/fixture-groups": {
         "title": "Geräte-Gruppen",
         "sidebar_label": "Geräte-Gruppen"
-      },
-      "controlling-fixtures/using-the-select-buttons-and-wheels": {
-        "title": "Auswahltasten und Encoder",
-        "sidebar_label": "Auswahltasten und Encoder"
       },
       "controlling-fixtures/viewing-and-editing-fixture-values": {
         "title": "Anzeigen/Verändern von Attribut-Werten",
@@ -157,6 +161,10 @@
         "title": "Erstellen eines Cues",
         "sidebar_label": "Erstellen eines Cues"
       },
+      "cues/cue-playback": {
+        "title": "Einen Cue verwenden",
+        "sidebar_label": "Einen Cue verwenden"
+      },
       "cues/cue-timing": {
         "title": "Zeiten für Cues",
         "sidebar_label": "Zeiten für Cues"
@@ -172,14 +180,6 @@
       "cues/playback-options": {
         "title": "Playback-Optionen",
         "sidebar_label": "Playback-Optionen"
-      },
-      "cues/using-a-cue": {
-        "title": "Einen Cue verwenden",
-        "sidebar_label": "Einen Cue verwenden"
-      },
-      "cues/cue-playback": {
-        "title": "Einen Cue verwenden",
-        "sidebar_label": "Einen Cue verwenden"
       },
       "effects": {
         "title": "Shapes und Effekte",
@@ -230,12 +230,16 @@
         "sidebar_label": "Grundlagen der IP-Adressierung"
       },
       "networking/connecting-the-arena-to-a-network": {
-        "title": "Netzwerkanschlüsse beim Arena",
-        "sidebar_label": "Netzwerkanschlüsse beim Arena"
+        "title": "Netzwerkanschlüsse beim Diamond 9 und Arena",
+        "sidebar_label": "Netzwerkanschlüsse beim Diamond 9 und Arena"
       },
       "networking/controlling-fixtures-over-a-network": {
         "title": "Steuern von Geräten über Netzwerk",
         "sidebar_label": "Steuern von Geräten über Netzwerk"
+      },
+      "networking/ports-used-by-titan": {
+        "title": "Verwendete Netzwerk-Ports",
+        "sidebar_label": "Verwendete Netzwerk-Ports"
       },
       "networking/using-active-fixtures": {
         "title": "Verwenden von Geräten mit CITP",
@@ -277,10 +281,6 @@
         "title": "Kopieren, Verschieben und Löschen",
         "sidebar_label": "Kopieren, Verschieben und Löschen"
       },
-      "patching/fixture-personalities": {
-        "title": "Personalities (Gerätedateien)",
-        "sidebar_label": "Personalities (Gerätedateien)"
-      },
       "patching/fixture-personality-options": {
         "title": "Erweiterte Funktionen",
         "sidebar_label": "Erweiterte Funktionen"
@@ -312,6 +312,10 @@
       "quick-start/programming-palettes": {
         "title": "Programmieren von Paletten",
         "sidebar_label": "Programmieren von Paletten"
+      },
+      "quick-start/tips-and-tricks": {
+        "title": "Tips und Tricks",
+        "sidebar_label": "Tips und Tricks"
       },
       "remote-control": {
         "title": "Fernsteuerung",
@@ -373,6 +377,10 @@
         "title": "System- und Benutzereinstellungen",
         "sidebar_label": "System- und Benutzereinstellungen"
       },
+      "system-settings/cleaning-the-console": {
+        "title": "Cleaning the console",
+        "sidebar_label": "Cleaning the console"
+      },
       "system-settings/curves": {
         "title": "Curves -- Kennlinien/Kurven",
         "sidebar_label": "Curves -- Kennlinien/Kurven"
@@ -408,6 +416,22 @@
       "system-settings/user-settings": {
         "title": "User Settings - Benutzereinstellungen",
         "sidebar_label": "User Settings - Benutzereinstellungen"
+      },
+      "timelines": {
+        "title": "Timelines",
+        "sidebar_label": "Timelines"
+      },
+      "timelines/creating-a-timeline": {
+        "title": "Erstellen einer Timeline",
+        "sidebar_label": "Erstellen einer Timeline"
+      },
+      "timelines/running-and-editing-timelines": {
+        "title": "Aufrufen und Editieren von Timelines",
+        "sidebar_label": "Aufrufen und Editieren von Timelines"
+      },
+      "timelines/timeline-options": {
+        "title": "Timeline-Optionen",
+        "sidebar_label": "Timeline-Optionen"
       },
       "titan-basics": {
         "title": "Anschliessen des Pultes, erste Schritte",
@@ -1813,6 +1837,10 @@
         "title": "Das Arena",
         "sidebar_label": "Das Arena"
       },
+      "version-15.0-about-the-consoles/diamond": {
+        "title": "Das Diamond 9",
+        "sidebar_label": "Das Diamond 9"
+      },
       "version-15.0-about-the-consoles/fader-wings": {
         "title": "Fader Wings",
         "sidebar_label": "Fader Wings"
@@ -1901,13 +1929,13 @@
         "title": "Weitere Optionen",
         "sidebar_label": "Weitere Optionen"
       },
+      "version-15.0-controlling-fixtures/changing-fixture-attributes": {
+        "title": "Geräte und Attribute einstellen",
+        "sidebar_label": "Geräte und Attribute einstellen"
+      },
       "version-15.0-controlling-fixtures/fixture-groups": {
         "title": "Geräte-Gruppen",
         "sidebar_label": "Geräte-Gruppen"
-      },
-      "version-15.0-controlling-fixtures/using-the-select-buttons-and-wheels": {
-        "title": "Auswahltasten und Encoder",
-        "sidebar_label": "Auswahltasten und Encoder"
       },
       "version-15.0-controlling-fixtures/viewing-and-editing-fixture-values": {
         "title": "Anzeigen/Verändern von Attribut-Werten",
@@ -2036,6 +2064,10 @@
       "version-15.0-networking/using-active-fixtures": {
         "title": "Verwenden von Geräten mit CITP",
         "sidebar_label": "Verwenden von Geräten mit CITP"
+      },
+      "version-15.0-networking/ports-used-by-titan": {
+        "title": "Verwendete Netzwerk-Ports",
+        "sidebar_label": "Verwendete Netzwerk-Ports"
       },
       "version-15.0-palettes": {
         "title": "Paletten",
@@ -2189,6 +2221,10 @@
         "title": "Wiederherstellen/Neuinstallation",
         "sidebar_label": "Wiederherstellen/Neuinstallation"
       },
+      "version-15.0-system-settings/cleaning-the-console": {
+        "title": "Cleaning the console",
+        "sidebar_label": "Cleaning the console"
+      },
       "version-15.0-system-settings/release-notes": {
         "title": "Release Notes",
         "sidebar_label": "Release Notes"
@@ -2204,6 +2240,22 @@
       "version-15.0-system-settings/user-settings": {
         "title": "User Settings - Benutzereinstellungen",
         "sidebar_label": "User Settings - Benutzereinstellungen"
+      },
+      "version-15.0-timelines": {
+        "title": "Timelines",
+        "sidebar_label": "Timelines"
+      },
+      "version-15.0-timelines/creating-a-timeline": {
+        "title": "Erstellen einer Timeline",
+        "sidebar_label": "Erstellen einer Timeline"
+      },
+      "version-15.0-timelines/running-and-editing-timelines": {
+        "title": "Aufrufen und Editieren von Timelines",
+        "sidebar_label": "Aufrufen und Editieren von Timelines"
+      },
+      "version-15.0-timelines/timeline-options": {
+        "title": "Timeline-Optionen",
+        "sidebar_label": "Timeline-Optionen"
       },
       "version-15.0-titan-basics": {
         "title": "Anschliessen des Pultes, erste Schritte",
@@ -2279,6 +2331,7 @@
       "Cues": "Cues",
       "Chases": "Chaser",
       "Cue Lists": "Cuelisten",
+      "Timelines": "Timelines",
       "Capture Visualiser": "Der Capture Visualiser",
       "Synergy": "Synergy und    Verbinden mit Ai",
       "Running The Show": "Steuern der Show",
@@ -2296,6 +2349,7 @@
     "Avolites Titan Manual|no description given": "Avolites Titan Manual",
     "Official Manual for the Avolites Titan software|no description given": "Official Manual for the Avolites Titan software",
     "Get Started|no description given": "Zum Handbuch",
+    "Bring lighting and video together on one visual canvas|no description given": "Bring lighting and video together on one visual canvas",
     "Synergy|no description given": "Synergy",
     "Bring lighting and video together on one visual canvas|no description given": "Einheitliche Steuerung von Licht und Video aus einer Hand",
     "PioneerDJ waveform and BPM sync integration|no description given": "Integration von PioneerDJ Waveform und BPM Sync",
