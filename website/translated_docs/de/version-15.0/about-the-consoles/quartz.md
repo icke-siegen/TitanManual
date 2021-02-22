@@ -1,5 +1,5 @@
 ---
-id: version-14.0-quartz
+id: version-15.0-quartz
 title: Quartz
 sidebar_label: Quartz
 description: Quartz - console design and features

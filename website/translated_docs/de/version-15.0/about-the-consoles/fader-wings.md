@@ -1,5 +1,5 @@
 ---
-id: version-14.0-fader-wings
+id: version-15.0-fader-wings
 title: Fader Wings
 sidebar_label: Fader Wings
 original_id: fader-wings
@@ -41,6 +41,8 @@ Pearl Expert, Arena und Sapphire Touch -- verwendet werden. Ebenso
 kann es mit dem T2 betrieben werden.
 
 Zur Anzeige der Belegung der Fader und Tasten gibt es das Fenster
-"Mobile Wing".
+**Mobile Wing** - zum Öffnen drücken Sie zweimal auf \<View/Open\> und wählen
+"Mobile Wing". Über das Kontextmenü des Fensters lassen sich verschiedene 
+Darstellungen der Tasten und Fader des Wings wählen.
 
 ![Titan Mobile Wing](/docs/images/Titan-Mobile-Wing.png)

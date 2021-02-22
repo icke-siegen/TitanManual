@@ -1,5 +1,5 @@
 ---
-id: version-14.0-linking-the-console-to-stand-alone-capture
+id: version-15.0-linking-the-console-to-stand-alone-capture
 title: Linking the Console to Stand-Alone Capture
 sidebar_label: Linking the Console to Stand-Alone Capture
 original_id: linking-the-console-to-stand-alone-capture
@@ -16,6 +16,9 @@ zur Auswahl unten im Reiter **Universes** in Capture angezeigt.
 Normalerweise erfolgt dies bereits vollautomatisch, aber befinden sich
 mehrere Titan-Pulte im Netzwerk, so ist eine manuelle Auswahl nötig.
 
+In Titan muss die Ausgabe per Art-Net oder sACN aktiviert sein, damit Capture
+auch gesteuert wird. Siehe [Einrichten der DMX-Ausgänge](../system-settings/dmx-output-mapping#einrichten-der-dmx-ausgänge).
+
 > Damit die Verbindung und das Synchronisieren funktioniert, muss Capture mindestens in der Version Nexum, 2018 oder 2020 vorliegen. Mit älteren Versionen funktioniert das nicht oder nicht richtig.
 
 Solange die Netzwerkverbindung besteht, überträgt das Pult Daten zur
@@ -24,7 +27,8 @@ so wird dies auch im Pult hinzugefügt. Wird dagegen ein neues Gerät auf
 dem Pult gepatcht, so wird dies erst im Pult und dann in Capture
 hinzugefügt. Wählt man ein Gerät aus -- im Pult oder in Capture -- so
 wird diese Auswahl auch im jeweils anderen Teil angezeigt. Will man dies
-nicht, so kann man in Capture **Console Link** deaktivieren.
+nicht, so kann man in Capture **Console Link** deaktivieren - die Simulation per 
+DMX/Art-Net/sACN funktioniert auch bei deaktiviertem Console Link.
 
 Den Patch vom Pult nach Capture übertragen
 ------------------------------------------
@@ -59,10 +63,12 @@ gepatcht werden:
 
 1. Drücken Sie \<Patch\>, \[Active Fixtures\]
 
-2. Der Capture-Computer wird nun als eine Option auf den Menütasten
+2. Wählen Sie \[CITP Visualisers\].
+
+3. Der Capture-Computer wird nun als eine Option auf den Menütasten
 angezeigt. Klicken Sie die entsprechende Taste an.
 
-3. Wählen Sie eine freie Geräte-Schaltfläche, um die Geräte ab da zu
+4. Wählen Sie eine freie Geräte-Schaltfläche, um die Geräte ab da zu
 patchen, oder wählen Sie die Option \[Patch Capture @...\], um
 automatisch auf den nächsten freien Platz zu patchen.
 

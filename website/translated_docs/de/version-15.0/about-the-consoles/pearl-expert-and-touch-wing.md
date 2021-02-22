@@ -1,5 +1,5 @@
 ---
-id: version-14.0-pearl-expert-and-touch-wing
+id: version-15.0-pearl-expert-and-touch-wing
 title: Pearl Expert and Touch Wing
 sidebar_label: Pearl Expert and Touch Wing
 description: Pearl Expert and Touch Wing - console design and features

@@ -1,5 +1,5 @@
 ---
-id: version-14.0-setting-up-the-rig
+id: version-15.0-setting-up-the-rig
 title: Setting up the Rig
 sidebar_label: Setting up the Rig
 original_id: setting-up-the-rig
@@ -12,7 +12,7 @@ Für einen realistischen Eindruck und eine bessere Orientierung lassen
 sich verschiedene feste Elemente hinzufügen.
 
 Öffnen Sie das Fenster \[Capture Visualiser Settings\] (entweder per Doppelklick auf
-[\<View / Open\>](../titan-basics/workspace-windows.md#auswahl-und-positionierung-der-arbeitsfenster), oder durch einen Klick auf den
+[\<View / Open\>](../titan-basics/workspace-windows.md#auswahl-und-positionierung-der-arbeitsfenster) und danach 'Capture Visualiser Settings' auswählen, oder durch einen Klick auf den
 Kontext-Button \{Open Settings\} im Capture Visualiser-Fenster). Klicken Sie
 oben auf den Reiter **Stage**.
 
@@ -43,13 +43,13 @@ Fixtures\] \[Update Personality\] \[Update All\]. Auch ein Gerätetausch ([Excha
 
 Geräte werden, sobald sie in Capture vorhanden sind, mit den Rädern
 (Encodern) positioniert. Wählen Sie dazu [ein oder mehrere Geräte oder
-ein Gerätegruppe](../controlling-fixtures/using-the-select-buttons-and-wheels.md#dimmer-und-geräte-zum-steuern-auswählen) aus und drücken Sie [\<Locate\>](../controlling-fixtures/using-the-select-buttons-and-wheels.md#geräte-auf-startposition-setzen-locate). Mit dem Kontext-Button
+ein Gerätegruppe](../controlling-fixtures.md#dimmer-und-geräte-zum-steuern-auswählen) aus und drücken Sie [\<Locate\>](../controlling-fixtures.md#geräte-auf-startposition-setzen-locate). Mit dem Kontext-Button
 \{Position - Orientation\} wird die Steuerung für Position und
 Orientierung der jeweils ausgewählten Geräte auf die Wheels gelegt. *Das
 Gleiche passiert, wenn man den Rad-Modus mit der Menütaste G auf „Räder
 = Visualiser" schaltet.*
 
-Wählen Sie mit den Attribut-Tasten **Position**, so können Sie nun die
+Wählen Sie mit den Attribut-Tasten \<Position\>, so können Sie nun die
 X/Y/Z-Position der gewählten Fixtures einstellen. Sind mehrere Geräte
 gewählt, so lassen sich mit der \<Fan\>-Taste oder der Option
 \{Scale-Fan\} die Geräte gleichmäßig verteilen/auffächern. Auch die
@@ -69,7 +69,7 @@ Achse | Beschreibung
 **Y** | bewegt nach oben/unten
 **Z** | bewegt nach vorn/hinten
 
-Klickt man nochmals auf **Position**, so schalten die Encoder auf
+Klickt man nochmals auf \<Position\>, so schalten die Encoder auf
 Orientation. Damit können die Geräte um die X/Y/Z-Achse
 gedreht/geschwenkt werden. Auch hierbei kann der [Fan-Modus](../controlling-fixtures/using-the-select-buttons-and-wheels.md#fan-modus) verwendet
 werden.
@@ -88,7 +88,7 @@ erreicht werden können.
 ![gimbal](/docs/images/Gimbal.jpeg)\
 *Illustration by MathsPoetry*
 
-Betätigen Sie **Position** ein drittes Mal, so können Sie die Rotation
+Betätigen Sie \<Position\> ein drittes Mal, so können Sie die Rotation
 verändern. Sind nur einzelne Geräte ausgewählt, hat das die gleiche
 Wirkung wie Orientation. Sind dagegen mehrere Geräte angewählt, so
 rotiert die Gruppe als Ganzes um ihren Mittelpunkt.

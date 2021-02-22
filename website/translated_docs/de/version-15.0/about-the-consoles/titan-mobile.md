@@ -1,5 +1,5 @@
 ---
-id: version-14.0-titan-mobile
+id: version-15.0-titan-mobile
 title: Titan Mobile
 sidebar_label: Titan Mobile
 original_id: titan-mobile
@@ -37,7 +37,7 @@ Einstellungen des Pultes ändern.
 verknüpft, etwa Speichern von Szenen, Kopieren, Speichern auf Disk.
 
 \(H\) Die **Macro- und Executortasten** sind frei belegbare Tasten; darauf lassen
-sich sowohl Cues als auch Makros oder Arbeitsumgebungen (Workspaces)
+sich sowohl Playbacks als auch Makros oder Arbeitsumgebungen (Workspaces)
 speichern.
 
 \(I\) Die **Fensterauswahltasten** dienen zum Öffnen und Umschalten der

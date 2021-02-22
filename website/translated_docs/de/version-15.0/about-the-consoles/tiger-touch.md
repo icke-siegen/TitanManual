@@ -1,5 +1,5 @@
 ---
-id: version-14.0-tiger-touch
+id: version-15.0-tiger-touch
 title: Tiger Touch
 sidebar_label: Tiger Touch
 description: Tiger Touch - console design and features
@@ -19,8 +19,8 @@ variablen Tasten.
 Abläufen: Cues, Cuelisten und Chaser.
 
 \(C\) Die **festen Playbacks** ermöglichen Zugriff auf weitere -- nicht
-umgeschaltete -- Speicherplätze, während mit den **Makro-Schaltern**
-häufig benutzte Tastenkombinationen automatisiert werden können.
+umgeschaltete -- Speicherplätze, während auf die **Makro-Tasten** sowohl 
+Playbacks als auch häufig benutzte Tastenkombinationen gespeichert werden können.
 
 \(D\) Der Bereich **Programmier- und Einstellfunktionen** enthält alle
 Steuerelemente zum Einrichten und Programmieren des Pultes.
@@ -52,9 +52,9 @@ des Pultes. Befehle dieser Taster sind in diesem Handbuch blau dargestellt,
 Diese Playbacks sind von der Seitenumschaltung nicht betroffen, jedoch
 lassen sie sich per Makro umschalten.
 
-\(I\) Auf den **Makro-Tastern** lassen sich häufig benutzte Abläufe von
-Tastendrücken abspeichern, und dann mit einem einzigen Tastendruck
-abrufen. Ebenso können hier Cues abgelegt werden.
+\(I\) Auf den **Makro-Tasten** lassen sich sowohl Playbacks als auch häufig 
+benutzte Abläufe von Tastendrücken abspeichern, und dann mit einem einzigen
+Tastendruck abrufen. 
 
 ![Tiger Touch controls 2](/docs/images/Tiger-Touch-controls-2.png)
 

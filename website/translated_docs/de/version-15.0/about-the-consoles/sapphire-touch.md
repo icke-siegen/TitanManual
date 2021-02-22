@@ -1,5 +1,5 @@
 ---
-id: version-14.0-sapphire-touch
+id: version-15.0-sapphire-touch
 title: Sapphire Touch
 sidebar_label: Sapphire Touch
 description: Sapphire Touch - console design and features
@@ -14,7 +14,7 @@ sowie -- oben rechts -- die aktuelle Menüseite und die Bezeichnungen der
 variablen Tasten.
 
 \(B\) Die **Playback-Fader** dienen zur Auswahl und Steuerung von Cues,
-Cuelisten und Chasern.
+Cuelisten und Chasern sowie anderen Funktionen.
 
 \(C\) Die **Preset-Playbacks** ermöglichen sowohl den Zugriff auf weitere --
 unabhängig umgeschaltete -- Cues, als auch das direkte Patchen von
@@ -22,8 +22,9 @@ Geräten auf diese Fader.
 
 \(D\) Die **Programmiersektion** schließlich enthält alle Steuerelemente zum
 Einrichten und Programmieren des Pultes, sowie 20 weitere
-**Macro-/Executor-Tasten**, auf die z.B. häufig benutzte Cues, Paletten oder
-Tastenfolgen gespeichert werden können.
+**Macro-/Executor-Tasten**, auf die sowohl Playbacks (Cues, Chaser, Cuelistn) als
+auch häufig benutzte Gruppen, Paletten oder Tastenfolgen und anderes gespeichert
+ werden können.
 
 ## Bedienoberfläche
 
@@ -51,10 +52,9 @@ Cues/Chaser, sowie zum direkten Patchen von Geräten. Diese Fader
 können mit den in der Mitte gelegenen \(I\) **Page-Tasten** getrennt von den
 unteren Playback-Fadern umgeschaltet werden.
 
-\(J\) Auf den **Makro-Tasten** lassen sich häufig benutzte Abläufe von
-Tastendrücken abspeichern, und dann mit einem einzigen Tastendruck
-abrufen. Ebenso können hier Cues etc. abgelegt werden. Im Bildschirm
-direkt darüber werden die Legenden angezeigt.
+\(J\) Auf den **Makro-Tasten** lassen sich Playbacks sowie häufig benutzte 
+Abläufe von Tastendrücken abspeichern, und dann mit einem einzigen Tastendruck
+abrufen. Im Bildschirm direkt darüber werden die Legenden angezeigt.
 
 \(K\) Die **Playbackfader** dienen zum Speichern und Abrufen von Cues etc..
 Mit den \(L\) **Seitenauswahltastern** kann man zu verschiedenen Seiten der

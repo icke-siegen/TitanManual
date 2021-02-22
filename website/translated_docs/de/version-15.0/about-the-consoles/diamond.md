@@ -84,73 +84,78 @@ eigens dafür vorgesehenem Display.
 \(N\) Die **Hauptfader** dienen zum Steuern von Cuelisten; mit dem T-Griff-Regler
 wird der Szenenmaster gesteuert, die beiden Motorfader daneben mit den Tasten
 zur Ablaufsteuerung dienen vor allem zum Steuern von Cuelisten.
-$$$
+
 ## Programming controls
 
 ![Diamond-N](/docs/images/Diamond-O.png)
 
-\(O\) The five  **Control wheels** are used to set control values (attributes) for
-the fixtures, and to set chase speeds and fades. The touch screen above
-the wheels shows information about the attributes being controlled. The buttons
-to the right of the wheels switch them to other functions such as fade timing,
-shape control or visualiser control.
+\(O\) Die fünf **Wheels (Encoder)** dienen zum Einstellen der Werte von Attributen 
+der zu steuernden Geräte; ebenso kann man damit Zeiten und Geschwindigkeiten 
+steuern. Im Bildschirm direkt oberhalb der Wheels wird angezeigt, welche Werte 
+gerade gesteuert werden. Mit den \<@\>-Tasten bei jedem Encoder lassen sich direkt 
+bestimmte Werte und Funktionen wählen sowie Werte numerisch eingeben. Mit den 
+Tasten rechts neben den Wheels kann eingestellt werden, ob die Wheels etwa zur 
+Einstellung der Attribute, für Fadezeiten, den Visualiser oder anderes dienen.
 
-\(P\) The dedicated **Editor Touchscreen** shows the Attribute Editor
-window giving a different way to select attributes such as colours and gobos.
+\(P\) Der spezielle **Editor-Touchscreen** zeigt den Attribut-Editor an, ein 
+Fenster, in dem man ebenfalls Farben, Gobos etc. wählen und einstellen kann.
 
-\(Q\) The **Function buttons** are used to carry out functions such as storing
-cues, copying, patching, saving to disk, etc.
+\(Q\) Die **Befehls- bzw. Funktionstasten** dienen zum direkten Aufruf der 
+wichtigsten Befehle, z.B. zum Patchen, Verschieben, Kopieren, Speichern oder 
+Löschen.
 
-\(R\) The **Attribute Buttons** are used to select which attributes of
-a fixture (e.g. colour, gobo, pan, focus) are going to be controlled
-using the Control wheels. The buttons light up to show you which
-attributes are active.
+\(R\) Mit den **Attribut-Tasten** werden die zu steuernden Attribute gewählt,
+z.B. Farbe, Gobo, Pan/Tilt oder Focus. Die jeweils angewählte Attributbank wird 
+durch eine leuchtende Taste angezeigt.
 
-\(S\) The **Numeric keypad** and other control buttons are used to enter
-values and change controls on the console.
+\(S\) Mit den **Ziffertasten** und anderen Eingabetasten können Werte exakt 
+eingegeben sowie auch Geräte oder Gruppen angewählt werden.
 
-\(T\) The dedicated **Intensity Wheel** and display controls intensity
-of selected fixtures.
+\(T\) Das **Dimmer-Handrad** sowie das zugehörige Display dient dazu, den Pegel 
+(Dimmer, Helligkeit, Output) des/der gewählten Geräte einzustellen und anzuzeigen.
 
-\(U\) The **trackball** controls pan and tilt of fixtures, and can also be
-used to control a mouse pointer for the screens.
+\(U\) Mit dem **Trackball** kann sowohl Pan/Tilt der angewählten Geräte als auch 
+der Mauszeiger auf den Touchscreens gesteuert werden; zur Umschaltung der 
+Betriebsart gibt es separate Tasten direkt daneben.
 
-## Front edge of the console
+## Vorderseite des Pultes
 
-Under the armrest at the front of the console is the **Power Switch**, a
-**USB socket** for connecting USB drives, and a pull-out drawer with an 
-illuminated **Keyboard** for entering legends.
+Unter der aufklappbaren Handgelenkauflage befindet sich der **Einschalter**, ein 
+**USB-Anschluss** z.B. für USB-Sticks zum Speichern der Show, sowie eine 
+herausziehbare beleuchtete **Tastatur** etwa zum Eingeben von Bezeichnungen.
 
-## The Back Panel
+## Die Rückseite
 
 ![Diamond Back Panel](/docs/images/Diamond-Back.png)
 
-\(a\) Mains power input (PowerCON TRUE1), mains isolator and UPS interrupt switch. Do not
-power the console off using this mains isolator switch, use the power switch at the front
-of the console.
+\(a\) Netzanschluss (PowerCON TRUE1), Netzschalter und Unterbrecher für die USV.
+Schalten Sie das Pult nicht mit diesem Schalter aus, sondern benutzen Sie den
+Einschalter unter der Handgelenkauflage.
 
-\(b\) Additional USB sockets for general purpose use.
+\(b\) Weitere USB-Buchsen zum Anschluss diverser Geräte.
 
-\(c\) DMX input for triggering.
+\(c\) DMX-Eingang zum Triggern.
 
-\(d\) Outputs for two additional screens - HDMI and USB for touch screen.
+\(d\) Anschüsse für zwei weitere Screens - jeweils HDMI und USB (Touchscreens).
 
-\(e\) MIDI in, thru and out.
+\(e\) MIDI In, Thru und Out.
 
-\(f\) Digital S/PDIF audio output.
+\(f\) Digitaler S/PDIF Audio-Ausgang.
 
-\(g\) Work light switch. The console has integrated LED lighting around the connections panel.
+\(g\) Schalter für Arbeitslicht. Das D9 verfügt über Beleuchtung der rückseitigen
+Anschlussblende.
 
-\(h\) Four gigabit etherCON network connections from the internal Luminex network switch.
+\(h\) Vier Gigabit etherCON Netzwerkanschlüsse des integrierten Luminex 
+Netzwerkswitches.
 
-\(i\) GPIO trigger connection (D-connector and separate jack connector).
+\(i\) GPIO Trigger-Anschluss (SubD sowie separate Klinkenbuchse).
 
-\(j\) Audio input for sound triggering.
+\(j\) Audio-Eingang für Sound-Trigger.
 
-\(k\) LTC Linear Timecode in and loop connections.
+\(k\) LTC-Timecode In und Loop Out.
 
-\(m\) Additional gigabit etherCON network connection.
+\(m\) Zusätzlicher Gigabit etherCON Netzwerkanschluss.
 
-\(n\) 10Gb quad opticalCON terminal.
+\(n\) Glasfaseranschluss für Netzwerk (1 GbE opticalCON DUO oder 10/1 GbE opticalCON QUAD).
 
-\(o\) Eight DMX512 outputs.
+\(o\) Acht DMX512-Ausgänge (XLR 5-pol).
