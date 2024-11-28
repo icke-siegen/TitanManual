@@ -20,6 +20,7 @@ class avoParse {
       buildDir: path.resolve(__dirname,'../website/build'),
       transDocsDir: path.resolve(__dirname,'../website/i18n'),
       i18nDir: path.resolve(__dirname,'../website/i18n'),
+      docusaurusFolder: '/docusaurus-plugin-content-docs',
     }
   
     this.regex = {
@@ -82,12 +83,13 @@ class avoParse {
     ]
 
     const versionsFile = JSON.parse(fs.readFileSync(this.paths.versions))
-    const trans = [this.lang, ...fs.readdirSync(this.paths.transDocsDir)].filter(dir => dir != ".DS_Store")
-    
+    const trans = [...fs.readdirSync(this.paths.transDocsDir)].filter(dir => dir != ".DS_Store")
+    if (!trans.includes(this.lang)) trans.push(this.lang)  //only to catch if old english versions are in the translated docs folder
+
     trans.forEach(tran => {
       const mainLang = tran == this.lang
 
-      const tranDir = path.join(this.paths.transDocsDir,tran)
+      const tranDir = path.join(this.paths.transDocsDir,tran,this.paths.docusaurusFolder)
       const tranVers = !mainLang ? fs.readdirSync(tranDir) : null
 
       versionsFile.forEach(version => {

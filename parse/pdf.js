@@ -6,6 +6,9 @@ const { program } = require("../website/node_modules/commander");
 //const console = require('node:console');
 //const console = require('node:console');
 const versions = require(avoParse.paths.versions);
+// const var_dump = require('var_dump');
+// var_dump(versions);
+// var_dump (avoParse.getVersions());
 
 const legalPath = path.join(__dirname,"PDF/legal-en.md");
 const templatePath = path.join(__dirname,"PDF/eisvogel_avo.latex");
@@ -31,12 +34,18 @@ const options = {
   outputDir: program.outputDir,
 }
 
+/*
 if(version == 'all') {
   for(let version of getVersions()) {
     createPDF(version, section, options);
   }
 }
 else {
+  createPDF(version, section, options);
+}
+*/
+
+for(let version of avoParse.getVersions()) {
   createPDF(version, section, options);
 }
 
@@ -128,7 +137,7 @@ function replaceYaml(filename,content,sectionHeading) {
  * @param {string} version Version of the manual, e.g. `12.0` or `next`
  * @return {string} The content with the images fixed
  */
-function replaceLinks(filename,content,docsPath,version) {
+function replaceLinks(filename,content,docsPath,version,lang) {
   // matches all links which are to local .md files
   return content.replace(avoParse.regex.linksLocalMd, function (match,text,link,anchor) {
     let filePath = filename.split("/");
@@ -145,7 +154,7 @@ function replaceLinks(filename,content,docsPath,version) {
 
     let fullFilePath = path.resolve(docsPath, filePath, link);
 
-    let resolvedPath = resolvePageVersion(path.join(filePath, link),version)
+    let resolvedPath = resolvePageVersion(path.join(filePath, link),version,lang)
 
     if (!resolvedPath) {
       // check file exists
@@ -230,8 +239,13 @@ function replaceBr(content) {
   content = content.replace(/<Keys\.SoftKey>(.*?)<\/Keys\.SoftKey>/gmis,"\\\[$1\\\]");
   content = content.replace(/<Keys\.Annotation>(.*?)<\/Keys\.Annotation>/gmis,"($1)");
   content = content.replace(/<strong>(.*?)<\/strong>/gmis,"**$1**");
+  content = content.replace(/import .*? from '.*?';\r?\n/gmi,""); 
   content = content.replace(/<em>(.*?)<\/em>/gmis,"*$1*");
-  content = content.replace(/import .*? from '.*?';\n/gmi,"");
+  /*
+  
+    import Keys from '@site/src/components/key.ts';
+    import Video from '@site/src/components/video.tsx';
+  */
   return content;
 }
 
@@ -259,12 +273,18 @@ function sidebarPath(version) {
  * @param {string} version Version of the manual, e.g. `12.0` or `next`
  * @return {string} Absolute path to the docs folder without the trailing slash, e.g. `/Users/user/AvoDocs/docs`
  */
-function docsVersionPath(version) {
+function docsVersionPath(version,lang) {
   if(version == "next") {
     return path.resolve("../docs/");
   }
   else {
+// console.log(`L 276 lang: ${lang}`);
     let filePath = path.join(avoParse.paths.versionedDocsDir,`version-${version}/`);
+    if (lang != avoParse.lang){
+//      filePath = path.join(avoParse.paths.transDocsDir, `/`, lang, avoParse.paths.docusaurusFolder, `version-${version}/`);
+//      console.log(`L 280 joins: ${avoParse.paths.transDocsDir} ${lang} ${avoParse.paths.docusaurusFolder}`);
+      filePath = path.join(avoParse.paths.transDocsDir,lang,avoParse.paths.docusaurusFolder,`version-${version}/`);
+    }
     if (!fs.existsSync(filePath)) {
       throw(`Could not find versioned docs: ${filePath}`)
     };
@@ -279,7 +299,9 @@ function docsVersionPath(version) {
  * @param {string} version Version of the manual, e.g. `12.0` or `next`
  * @return {string} The concatenated formatted files
  */
-function formatMdFiles(docsPath, sidebar, version) {
+function formatMdFiles(docsPath, sidebar, version, lang) {
+// console.log(`L 298 DocsPath: ${docsPath}`);
+// console.log(`L 399 formatMdFile.lang: ${lang}`);
   let output = "";
   if(version == 'next') {
     docs = sidebar.docs;
@@ -287,6 +309,8 @@ function formatMdFiles(docsPath, sidebar, version) {
   else {
     docs = sidebar[`version-${version}\/docs`];
   }
+//  docs = docsPath;
+//  var_dump(docs);
 
   let sectionFound = false;
   for(let index in docs) {
@@ -295,7 +319,7 @@ function formatMdFiles(docsPath, sidebar, version) {
       sectionFound = true;
       for(let page of docs[index].items) {
         page = page.id.replace(`version-${version}/`,"")
-      output += formatMd(docsPath,page+'.md',version,sec);
+        output += formatMd(docsPath,page+'.md',version,sec,lang);
       }
     }
   }
@@ -315,9 +339,11 @@ function formatMdFiles(docsPath, sidebar, version) {
  * @param {string} version Version of the manual, e.g. `12.0` or `next`
  * @return {string} Absolute file path to the latest version (null if not found)
  */
-function resolvePageVersion(filename,version) {
-  let filepath = path.resolve(docsVersionPath(version), filename);
-
+function resolvePageVersion(filename,version,lang) {
+// console.log(`L 338 lang: ${lang}`);
+  let filepath = path.resolve(docsVersionPath(version,lang), filename);
+// let filepath = filename;
+// console.log(`L 341 filepath: ${filepath}`);
   if (fs.existsSync(filepath)) {
     return filepath;
   }
@@ -329,7 +355,7 @@ function resolvePageVersion(filename,version) {
       return null;
     }
 
-    return resolvePageVersion(filename,versions[++currentIndex])
+    return resolvePageVersion(filename,versions[++currentIndex],lang)
   }
 }
 
@@ -340,9 +366,11 @@ function resolvePageVersion(filename,version) {
  * @param {string} version Version of the manual, e.g. `12.0` or `next`
  * @return {string} The formatted MarkDown
  */
-function formatMd(docsPath,filename,version,sectionHeading) {
-  let filepath = resolvePageVersion(filename,version);
-
+function formatMd(docsPath,filename,version,sectionHeading,lang) {
+// console.log(`formatMd.lang = ${lang}`);
+// console.log(`L 366 docsPath = ${docsPath}`);
+  let filepath = resolvePageVersion(filename,version,lang);
+// console.log(`L 368 filepath = ${filepath}`);
   if (!filepath) {
     process.emitWarning(`[${version}] ${filename}: File referenced in sidebar not found`);
     return '';
@@ -357,7 +385,7 @@ function formatMd(docsPath,filename,version,sectionHeading) {
   content = replaceYaml(filename,content,sectionHeading);
 
   // replace links to md files with the title links created above
-  content = replaceLinks(filename,content,docsPath,version);
+  content = replaceLinks(filename,content,docsPath,version,lang);
 
   // fix the absolute image path
   content = replaceImagepath(filename,content);
@@ -382,7 +410,7 @@ function formatMd(docsPath,filename,version,sectionHeading) {
  * @param {string} version (Optional) Which section is being exported
  * @return {string} The filename of the produced PDF
  */
-function generatePDF(filePath,version,section=null,options={}) {
+function generatePDF(filePath,version,section=null,options={},lang) {
   // format version name, e.g. "Titan 13.0"
   if(version == "next") {
     version = "Pre-Release";
@@ -396,7 +424,7 @@ function generatePDF(filePath,version,section=null,options={}) {
   const ISODate = new Date().toISOString().slice(0,19).replace(/[T:]/g,"-");
 
   // format & sanitize the filename
-  let filename = `${version}${section}-${ISODate}`;
+  let filename = `${version}-${lang}${section}-${ISODate}`;
   filename = filename.replace(/[^\w]/g,"-");
   filename += '.pdf';
   filename = path.join(options.outputDir, filename);
@@ -464,14 +492,14 @@ pandoc --template "${options.templatePath}" \
  * @return {string} The filename of the produced PDF
  */
 function createPDF(version,section=null, options={}) {
-  console.log(`Formatting version '${version}'`)
+  console.log(`Formatting version ${version.number} - ${version.lang}`)
 
   // get the path of the sidebar file
-  let sidebarFile = fs.readFileSync(sidebarPath(version));
-  let sidebar = JSON.parse(sidebarFile);
+//  let sidebarFile = fs.readFileSync(sidebarPath(version));
+//  let sidebar = JSON.parse(sidebarFile);
 
   // get the path for docs of the version
-  docsPath = docsVersionPath(version);
+//  docsPath = docsVersionPath(version);
 
   let output = '';
   if (options.legal) {
@@ -479,11 +507,22 @@ function createPDF(version,section=null, options={}) {
     output += "\n\n";
   }
 
-  // format the files
-  output += formatMdFiles(docsPath, sidebar, version);
+// var_dump(version.sidebar);
 
+// let sidebarFile = fs.readFileSync(sidebarPath(version.sidebar))
+let sidebar = JSON.parse(fs.readFileSync(version.sidebar));
+
+
+  // format the files
+//  output += formatMdFiles(docsPath, sidebar, version);
+// console.log(`L 513 Version.Lang ${version.lang}`);
+  output += formatMdFiles(version.dir, sidebar, version.number, version.lang);
+// console.log(`L 515 Version.Dir ${version.dir}`);
+// console.log(`L 516 Version.Sidebar ${version.sidebar}`);
+// console.log(`L 517 Version.Number ${version.number}`);
+let name = "pdf" + version.number + "-" + version.lang + ".md"
   // create formatted MD file
-  let formattedMdPath = path.join(options.outputDir, "pdf.md");
+  let formattedMdPath = path.join(options.outputDir, name);
   try {
     fs.writeFileSync(formattedMdPath, output);
   }
@@ -493,5 +532,5 @@ function createPDF(version,section=null, options={}) {
   }
 
   // generate the PDF
-  return generatePDF(formattedMdPath,version,section,options);
+  return generatePDF(formattedMdPath,version.number,section,options,version.lang);
 }
