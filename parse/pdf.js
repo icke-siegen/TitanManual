@@ -46,7 +46,9 @@ else {
 */
 
 for(let version of avoParse.getVersions()) {
-  createPDF(version, section, options);
+  if (version.number == 15.0){
+    createPDF(version, section, options);
+  }
 }
 
 /**
@@ -238,8 +240,8 @@ function replaceBr(content) {
   content = content.replace(/<Keys\.HardKey>(.*?)<\/Keys\.HardKey>/gmis,"\\\<$1\\\>");
   content = content.replace(/<Keys\.SoftKey>(.*?)<\/Keys\.SoftKey>/gmis,"\\\[$1\\\]");
   content = content.replace(/<Keys\.Annotation>(.*?)<\/Keys\.Annotation>/gmis,"($1)");
-  content = content.replace(/<strong>(.*?)<\/strong>/gmis,"**$1**");
   content = content.replace(/import .*? from '.*?';\r?\n/gmi,""); 
+  content = content.replace(/<strong>(.*?)<\/strong>/gmis,"**$1**");
   content = content.replace(/<em>(.*?)<\/em>/gmis,"*$1*");
   /*
   
@@ -301,6 +303,8 @@ function docsVersionPath(version,lang) {
  */
 function formatMdFiles(docsPath, sidebar, version, lang) {
 // console.log(`L 298 DocsPath: ${docsPath}`);
+// console.log(`L 304 sidebar: ${sidebar}`);
+// var_dump(sidebar);
 // console.log(`L 399 formatMdFile.lang: ${lang}`);
   let output = "";
   if(version == 'next') {
@@ -319,6 +323,9 @@ function formatMdFiles(docsPath, sidebar, version, lang) {
       sectionFound = true;
       for(let page of docs[index].items) {
         page = page.id.replace(`version-${version}/`,"")
+//    if (lang != avoParse.lang){
+//      sec = lang + sec;
+//    }
         output += formatMd(docsPath,page+'.md',version,sec,lang);
       }
     }
@@ -507,11 +514,10 @@ function createPDF(version,section=null, options={}) {
     output += "\n\n";
   }
 
-// var_dump(version.sidebar);
+ // var_dump(version.sidebar);
 
 // let sidebarFile = fs.readFileSync(sidebarPath(version.sidebar))
 let sidebar = JSON.parse(fs.readFileSync(version.sidebar));
-
 
   // format the files
 //  output += formatMdFiles(docsPath, sidebar, version);

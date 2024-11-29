@@ -25,7 +25,7 @@ class avoParse {
   
     this.regex = {
       // matches Yaml block with title
-      yamlBlockTitle: /^---(?:[\n]|.)*title: *([\w ]*)(?:[\n]|.(?!--))*---/mgi,
+      yamlBlockTitle: /^---(?:[\r?\n]|.)*title: *([\w ]*)(?:[\r?\n]|.(?!--))*---/mgi,
 
       // matches all links which are to local .md files
       linksLocalMd: /(?<![\\!])\[(?<text>[^\]]*)(?<!\\)\]\((?!https?:\/\/)(?!\/\/)(?!#)(?<link>[a-zA-Z0-9-\.\/]*\.md)(?<anchor>[^)]*)\)/mgi,
