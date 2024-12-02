@@ -13,6 +13,7 @@ const versions = require(avoParse.paths.versions);
 const legalPath = path.join(__dirname,"PDF/legal-en.md");
 const templatePath = path.join(__dirname,"PDF/eisvogel_avo.latex");
 const sectionNumberFilter = path.join(__dirname,"PDF/lua-section-number-filter.lua");
+const sectionNumberFilterDe = path.join(__dirname,"PDF/lua-section-number-filter-de.lua");
 const headerPath = path.join(__dirname,"PDF/header.yaml");
 const logoPath = path.join(__dirname,"PDF/avo.png");
 
@@ -26,30 +27,39 @@ program
 
 program.outputDir = setOutputDir(program.outputDir);
 
-let version = program.manversion ? program.manversion.toLowerCase() : "all";
+let manversion = program.manversion ? program.manversion.toLowerCase() : "all";
 const section = program.section ? program.section.toLowerCase() : null;
+
+// the link text 'Section' is set in the lua-section-number-filter.lua
+// in order to translate this copy the lua file, translate this word, add the file as constant above, 
+// and select it based on the language in generatePDF() below
+let secfilter = sectionNumberFilter;
 
 const options = {
   legal: program.legal,
   outputDir: program.outputDir,
 }
 
-/*
-if(version == 'all') {
-  for(let version of getVersions()) {
-    createPDF(version, section, options);
-  }
-}
-else {
+for(let version of avoParse.getVersions(manversion)) {
   createPDF(version, section, options);
 }
-*/
+
+/*
+
+if(version == 'all') {
+  for(let version of avoParse.getVersions()) {
+    createPDF(version, section, options);
+  }
+} else {
+  createPDF(version, section, options);
+}
 
 for(let version of avoParse.getVersions()) {
   if (version.number == 15.0){
     createPDF(version, section, options);
   }
 }
+*/
 
 /**
  * Get all of the versions of the docs specified in the versions.json file, plus `next`
@@ -123,6 +133,8 @@ function replaceYaml(filename,content,sectionHeading) {
   // matches Yaml block with title
   return content.replace(avoParse.regex.yamlBlockTitle,function (match,title) {
     titleLink = filenameToTitleLink(filename);
+	// console.log(`L126 filename: ${filename}`);
+	// console.log(`L127 sectionHeading: ${sectionHeading}`);
     let sectionHeadingText = "";
     if (!filename.match("/")) {
       sectionHeadingText = `\\pagebreak \n# ${sectionHeading}\n\n`
@@ -234,6 +246,7 @@ function replaceBr(content) {
  * Replace key tags with normal tags
  * @param {string} content Contents of the .md file with the tags in
  * @return {string} The content with the breaks replaced
+ * the additional \r for /import makes it work for files with windows-style line endings
  */
  function replaceJSX(content) {
   content = content.replace(/<Keys\.ContextKey>(.*?)<\/Keys\.ContextKey>/gmis,"{$1}");
@@ -441,6 +454,17 @@ function generatePDF(filePath,version,section=null,options={},lang) {
   options.headerPath = options.headerPath ? options.headerPath : headerPath;
   options.logoPath = options.logoPath ? options.logoPath : logoPath;
 
+  // default toc title
+  // toc-title is a variable used by Pandoc. If not set then it is defined by the pdf engine
+  // see https://stackoverflow.com/questions/20472957/how-to-change-header-contents-of-automatic-toc-when-using-pandoc
+  // to make it more predictable we set it here (and a few lines down for translated languages)
+  let toctitle = "Contents";
+  
+  if(lang == "de") {
+    secfilter = sectionNumberFilterDe;
+    toctitle = "Inhalt";
+  }
+
   console.log(`Producing PDF: ${filename}`)
 
   const command = `
@@ -455,7 +479,7 @@ pandoc --template "${options.templatePath}" \
   --number-sections \
   -fmarkdown-implicit_figures \
   --self-contained \
-  --lua-filter="${sectionNumberFilter}" \
+  --lua-filter="${secfilter}" \
   -V fontsize=8pt \
   -M date="$DATE" \
   -M footer-center="$DATE" \
@@ -465,6 +489,7 @@ pandoc --template "${options.templatePath}" \
   -M logo="${options.logoPath}" \
   -V colorlinks=true \
   -V block-headings \
+  -V toc-title="${toctitle}" \
   "${filePath}"`;
 
   var hrstart = process.hrtime();
