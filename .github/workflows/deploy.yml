@@ -176,6 +176,16 @@ jobs:
         ssh_options: ''
         src: 'website/build/'
         dest: 'web@51.104.240.248:/var/www/html/manuals/titan/'
+    - name: SbDeploy
+      uses: Pendect/action-rsyncer@v1.1.0
+      env:
+        DEPLOY_KEY: ${{secrets.SB_DEPLOY_KEY}}
+      with:
+        flags: '-avzr --delete'
+        options: ''
+        ssh_options: ''
+        src: 'website/build/'
+        dest: 'avosupport.de_uif9inez29@85.215.130.134:/var/www/vhosts/avosupport.de/manual.avosupport.de/'
 
   download:
     name: Versions Page
@@ -232,3 +242,14 @@ jobs:
           ssh_options: ''
           src: 'website/build/'
           dest: 'web@51.104.240.248:/var/www/html/manuals/titan/'
+          
+    - name: SbDeploy
+      uses: Pendect/action-rsyncer@v1.1.0
+      env:
+        DEPLOY_KEY: ${{secrets.SB_DEPLOY_KEY}}
+      with:
+        flags: '-avzr --delete'
+        options: ''
+        ssh_options: ''
+        src: 'website/build/'
+        dest: 'avosupport.de_uif9inez29@85.215.130.134:/var/www/vhosts/avosupport.de/manual.avosupport.de/'
