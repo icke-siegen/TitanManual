@@ -1,7 +1,9 @@
 name: Release
 
 on:
-  workflow_dispatch
+  release:
+    types:
+      - created
 
 env:
   NODE_VERSION: '16.x'
