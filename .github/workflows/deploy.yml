@@ -157,7 +157,7 @@ jobs:
         yarn run build
         yarn run test
     - name: Deploy
-      uses: Pendect/action-rsyncer@v1.1.0
+      uses: Pendect/action-rsyncer@v2.0.0
       env:
         DEPLOY_KEY: ${{secrets.DEPLOY_KEY}}
       with:
@@ -167,7 +167,7 @@ jobs:
         src: 'website/build/'
         dest: 'root@176.58.122.97:/var/www/sites/avodocs/'
     - name: AvoDeploy
-      uses: Pendect/action-rsyncer@v1.1.0
+      uses: Pendect/action-rsyncer@v2.0.0
       env:
         DEPLOY_KEY: ${{secrets.AVO_DEPLOY_KEY}}
       with:
@@ -177,15 +177,13 @@ jobs:
         src: 'website/build/'
         dest: 'web@51.104.240.248:/var/www/html/manuals/titan/'
     - name: SbDeploy
-      uses: Pendect/action-rsyncer@v1.1.0
-      env:
-        DEPLOY_KEY: ${{secrets.SB_DEPLOY_KEY}}
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
-        flags: '-avzr --delete'
-        options: ''
-        ssh_options: ''
-        src: 'website/build/'
-        dest: 'avosupport.de_uif9inez29@85.215.130.134:/var/www/vhosts/avosupport.de/manual.avosupport.de/'
+        server: 85.215.130.134
+        username: avosupport.de_uif9inez29
+        password: ${{secrets.SB_DEPLOY_KEY}}
+        local-dir: 'website/build/'
+        server-dir: '/manual.avosupport.de/'
 
   download:
     name: Versions Page
@@ -197,8 +195,8 @@ jobs:
         with:
           submodules: recursive
 
-      - name: Use Node.js ${{ env.NODE_VERSION }}
         uses: actions/setup-node@v1
+      - name: Use Node.js ${{ env.NODE_VERSION }}
         with:
           node-version: ${{ env.NODE_VERSION }}
 
@@ -222,7 +220,7 @@ jobs:
           yarn run build
 
       - name: Deploy
-        uses: Pendect/action-rsyncer@v1.1.0
+        uses: Pendect/action-rsyncer@v2.0.0
         env:
           DEPLOY_KEY: ${{secrets.DEPLOY_KEY}}
         with:
@@ -233,7 +231,7 @@ jobs:
           dest: 'root@176.58.122.97:/var/www/sites/avodocs/'
 
       - name: AvoDeploy
-        uses: Pendect/action-rsyncer@v1.1.0
+        uses: Pendect/action-rsyncer@v2.0.0
         env:
           DEPLOY_KEY: ${{secrets.AVO_DEPLOY_KEY}}
         with:
@@ -244,12 +242,10 @@ jobs:
           dest: 'web@51.104.240.248:/var/www/html/manuals/titan/'
           
       - name: SbDeploy
-        uses: Pendect/action-rsyncer@v1.1.0
-        env:
-          DEPLOY_KEY: ${{secrets.SB_DEPLOY_KEY}}
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          flags: '-avzr --delete'
-          options: ''
-          ssh_options: ''
-          src: 'website/build/'
-          dest: 'avosupport.de_uif9inez29@85.215.130.134:/var/www/vhosts/avosupport.de/manual.avosupport.de/'
+          server: 85.215.130.134
+          username: avosupport.de_uif9inez29
+          password: ${{secrets.SB_DEPLOY_KEY}}
+          local-dir: 'website/build/'
+          server-dir: '/manual.avosupport.de/'
