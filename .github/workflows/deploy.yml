@@ -157,6 +157,7 @@ jobs:
         yarn run build
         yarn run test
     - name: Deploy
+      if: ${{ false }}
       uses: Pendect/action-rsyncer@v2.0.0
       env:
         DEPLOY_KEY: ${{secrets.DEPLOY_KEY}}
@@ -167,6 +168,7 @@ jobs:
         src: 'website/build/'
         dest: 'root@176.58.122.97:/var/www/sites/avodocs/'
     - name: AvoDeploy
+      if: ${{ false }}
       uses: Pendect/action-rsyncer@v2.0.0
       env:
         DEPLOY_KEY: ${{secrets.AVO_DEPLOY_KEY}}
@@ -220,6 +222,7 @@ jobs:
           yarn run build
 
       - name: Deploy
+        if: ${{ false }}
         uses: Pendect/action-rsyncer@v2.0.0
         env:
           DEPLOY_KEY: ${{secrets.DEPLOY_KEY}}
@@ -231,6 +234,7 @@ jobs:
           dest: 'root@176.58.122.97:/var/www/sites/avodocs/'
 
       - name: AvoDeploy
+        if: ${{ false }}
         uses: Pendect/action-rsyncer@v2.0.0
         env:
           DEPLOY_KEY: ${{secrets.AVO_DEPLOY_KEY}}
