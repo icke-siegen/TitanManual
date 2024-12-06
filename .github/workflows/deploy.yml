@@ -182,7 +182,8 @@ jobs:
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
         server: 85.215.130.134
-        protocol: ftps-legacy
+        protocol: ftps
+        security: loose
         username: avosupport.de_uif9inez29
         password: ${{secrets.SB_DEPLOY_KEY}}
         local-dir: 'website/build/'
@@ -250,7 +251,8 @@ jobs:
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: 85.215.130.134
-          protocol: ftps-legacy
+          protocol: ftps
+          security: loose
           username: avosupport.de_uif9inez29
           password: ${{secrets.SB_DEPLOY_KEY}}
           local-dir: 'website/build/'
