@@ -3,7 +3,7 @@ module.exports={
   "tagline": "Official Manual for the Avolites Titan and Prism software",
   "url": "https://manual.avolites.com",
   "baseUrl": "/",
-  "organizationName": "AvolitesLtd",
+  "organizationName": "icke-siegen",
   "projectName": "TitanManual",
   "scripts": [
     "https://buttons.github.io/buttons.js",
@@ -18,7 +18,7 @@ module.exports={
     "markdownPlugins": [
       null
     ],
-    "repoUrl": "https://github.com/AvolitesLtd/TitanManual"
+    "repoUrl": "https://github.com/icke-siegen/TitanManual"
   },
   "onBrokenLinks": "log",
   "onBrokenMarkdownLinks": "log",
