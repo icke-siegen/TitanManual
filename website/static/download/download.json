@@ -1,830 +1,676 @@
 [
-    {
-      "version": "1.0.22",
-      "id": 40897378,
-      "url": "https://github.com/AvolitesLtd/TitanManual/releases/tag/1.0.22",
-      "prerelease": false,
-      "date": "2021-04-03T11:07:18Z",
-      "downloads": {
-        "Windows": {
-          "stand-alone": {
-            "name": "Avolites.Titan.Manual.1.0.2.exe",
-            "size": "91.4MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.22/Avolites.Titan.Manual.1.0.2.exe"
-          },
-          "installer": {
-            "name": "Avolites.Titan.Manual.Setup.1.0.2.exe",
-            "size": "91.6MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.22/Avolites.Titan.Manual.Setup.1.0.2.exe"
-          }
-        },
-        "Linux": {
-          ".deb": {
-            "name": "avodocs_1.0.2_amd64.deb",
-            "size": "95.7MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.22/avodocs_1.0.2_amd64.deb"
-          },
-          ".AppImage": {
-            "name": "Avolites.Titan.Manual-1.0.2.AppImage",
-            "size": "128.7MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.22/Avolites.Titan.Manual-1.0.2.AppImage"
-          }
-        },
-        "Mac": {
-          ".zip": {
-            "name": "Avolites.Titan.Manual-1.0.2-mac.zip",
-            "size": "124.6MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.22/Avolites.Titan.Manual-1.0.2-mac.zip"
-          },
-          ".dmg": {
-            "name": "Avolites.Titan.Manual-1.0.2.dmg",
-            "size": "127.8MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.22/Avolites.Titan.Manual-1.0.2.dmg"
-          }
-        },
-        "PDF": {}
-      }
-    },
-    {
-      "version": "1.0.21",
-      "id": 36850370,
-      "url": "https://github.com/AvolitesLtd/TitanManual/releases/tag/1.0.21",
-      "prerelease": false,
-      "date": "2021-01-25T10:54:26Z",
-      "downloads": {
-        "Windows": {
-          "stand-alone": {
-            "name": "Avolites.Titan.Manual.1.0.2.exe",
-            "size": "89.9MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.21/Avolites.Titan.Manual.1.0.2.exe"
-          },
-          "installer": {
-            "name": "Avolites.Titan.Manual.Setup.1.0.2.exe",
-            "size": "90.1MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.21/Avolites.Titan.Manual.Setup.1.0.2.exe"
-          }
-        },
-        "Linux": {
-          ".deb": {
-            "name": "avodocs_1.0.2_amd64.deb",
-            "size": "94.6MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.21/avodocs_1.0.2_amd64.deb"
-          },
-          ".AppImage": {
-            "name": "Avolites.Titan.Manual-1.0.2.AppImage",
-            "size": "127.5MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.21/Avolites.Titan.Manual-1.0.2.AppImage"
-          }
-        },
-        "Mac": {
-          ".zip": {
-            "name": "Avolites.Titan.Manual-1.0.2-mac.zip",
-            "size": "123.5MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.21/Avolites.Titan.Manual-1.0.2-mac.zip"
-          },
-          ".dmg": {
-            "name": "Avolites.Titan.Manual-1.0.2.dmg",
-            "size": "126.9MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.21/Avolites.Titan.Manual-1.0.2.dmg"
-          }
-        },
-        "PDF": {
-          "12.0": {
-            "name": "Titan-12-0-2021-01-25-11-04-19.pdf",
-            "size": "31.2MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.21/Titan-12-0-2021-01-25-11-04-19.pdf"
-          },
-          "13.0": {
-            "name": "Titan-13-0-2021-01-25-11-01-29.pdf",
-            "size": "32.0MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.21/Titan-13-0-2021-01-25-11-01-29.pdf"
-          },
-          "14.0": {
-            "name": "Titan-14-0-2021-01-25-10-58-34.pdf",
-            "size": "32.7MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.21/Titan-14-0-2021-01-25-10-58-34.pdf"
-          },
-          "Pre-Release": {
-            "name": "Titan-Pre-Release-2021-01-25-11-07-09.pdf",
-            "size": "39.1MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.21/Titan-Pre-Release-2021-01-25-11-07-09.pdf"
-          }
+  {
+    "version": "0.0.108",
+    "id": 189530571,
+    "url": "https://github.com/icke-siegen/TitanManual/releases/tag/0.0.108",
+    "prerelease": false,
+    "date": "2024-12-07T08:30:53Z",
+    "downloads": {
+      "Windows": {
+        "installer": {
+          "name": "Avolites.Manual.Setup.1.2.17.exe",
+          "size": "351.0MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.108/Avolites.Manual.Setup.1.2.17.exe"
         }
-      }
-    },
-    {
-      "version": "1.0.20",
-      "id": 33794933,
-      "url": "https://github.com/AvolitesLtd/TitanManual/releases/tag/1.0.20",
-      "prerelease": false,
-      "date": "2020-11-11T10:20:20Z",
-      "downloads": {
-        "Windows": {
-          "stand-alone": {
-            "name": "Avolites.Titan.Manual.1.0.0.exe",
-            "size": "82.5MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.20/Avolites.Titan.Manual.1.0.0.exe"
-          },
-          "installer": {
-            "name": "Avolites.Titan.Manual.Setup.1.0.0.exe",
-            "size": "82.7MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.20/Avolites.Titan.Manual.Setup.1.0.0.exe"
-          }
+      },
+      "Linux": {
+        ".deb": {
+          "name": "avodocs_1.2.17_amd64.deb",
+          "size": "331.9MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.108/avodocs_1.2.17_amd64.deb"
         },
-        "Linux": {
-          ".deb": {
-            "name": "avodocs_1.0.0_amd64.deb",
-            "size": "87.1MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.20/avodocs_1.0.0_amd64.deb"
-          },
-          ".AppImage": {
-            "name": "Avolites.Titan.Manual-1.0.0.AppImage",
-            "size": "119.8MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.20/Avolites.Titan.Manual-1.0.0.AppImage"
-          }
-        },
-        "Mac": {
-          ".zip": {
-            "name": "Avolites.Titan.Manual-1.0.0-mac.zip",
-            "size": "115.8MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.20/Avolites.Titan.Manual-1.0.0-mac.zip"
-          },
-          ".dmg": {
-            "name": "Avolites.Titan.Manual-1.0.0.dmg",
-            "size": "119.1MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.20/Avolites.Titan.Manual-1.0.0.dmg"
-          }
-        },
-        "PDF": {}
-      }
-    },
-    {
-      "version": "1.0.19",
-      "id": 33053581,
-      "url": "https://github.com/AvolitesLtd/TitanManual/releases/tag/1.0.19",
-      "prerelease": false,
-      "date": "2020-10-26T12:05:22Z",
-      "downloads": {
-        "Windows": {
-          "stand-alone": {
-            "name": "Avolites.Titan.Manual.1.0.0.exe",
-            "size": "78.3MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.19/Avolites.Titan.Manual.1.0.0.exe"
-          },
-          "installer": {
-            "name": "Avolites.Titan.Manual.Setup.1.0.0.exe",
-            "size": "78.5MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.19/Avolites.Titan.Manual.Setup.1.0.0.exe"
-          }
-        },
-        "Linux": {
-          ".deb": {
-            "name": "avodocs_1.0.0_amd64.deb",
-            "size": "83.9MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.19/avodocs_1.0.0_amd64.deb"
-          },
-          ".AppImage": {
-            "name": "Avolites.Titan.Manual-1.0.0.AppImage",
-            "size": "112.2MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.19/Avolites.Titan.Manual-1.0.0.AppImage"
-          }
-        },
-        "Mac": {
-          ".zip": {
-            "name": "Avolites.Titan.Manual-1.0.0-mac.zip",
-            "size": "102.1MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.19/Avolites.Titan.Manual-1.0.0-mac.zip"
-          },
-          ".dmg": {
-            "name": "Avolites.Titan.Manual-1.0.0.dmg",
-            "size": "105.1MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.19/Avolites.Titan.Manual-1.0.0.dmg"
-          }
-        },
-        "PDF": {
-          "12.0": {
-            "name": "Titan-12-0-2020-10-26-12-14-59.pdf",
-            "size": "31.2MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.19/Titan-12-0-2020-10-26-12-14-59.pdf"
-          },
-          "13.0": {
-            "name": "Titan-13-0-2020-10-26-12-12-05.pdf",
-            "size": "32.0MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.19/Titan-13-0-2020-10-26-12-12-05.pdf"
-          },
-          "14.0": {
-            "name": "Titan-14-0-2020-10-26-12-09-03.pdf",
-            "size": "32.7MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.19/Titan-14-0-2020-10-26-12-09-03.pdf"
-          },
-          "Pre-Release": {
-            "name": "Titan-Pre-Release-2020-10-26-12-17-48.pdf",
-            "size": "32.7MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.19/Titan-Pre-Release-2020-10-26-12-17-48.pdf"
-          }
+        ".AppImage": {
+          "name": "Avolites.Manual-1.2.17.AppImage",
+          "size": "389.8MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.108/Avolites.Manual-1.2.17.AppImage"
         }
-      }
-    },
-    {
-      "version": "1.0.18",
-      "id": 32175786,
-      "url": "https://github.com/AvolitesLtd/TitanManual/releases/tag/1.0.18",
-      "prerelease": false,
-      "date": "2020-10-05T16:15:39Z",
-      "downloads": {
-        "Windows": {
-          "stand-alone": {
-            "name": "Avolites.Titan.Manual.1.0.0.exe",
-            "size": "77.6MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.18/Avolites.Titan.Manual.1.0.0.exe"
-          },
-          "installer": {
-            "name": "Avolites.Titan.Manual.Setup.1.0.0.exe",
-            "size": "77.8MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.18/Avolites.Titan.Manual.Setup.1.0.0.exe"
-          }
+      },
+      "Mac": {
+        ".dmg": {
+          "name": "Avolites.Manual-1.2.17-arm64.dmg",
+          "size": "389.0MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.108/Avolites.Manual-1.2.17-arm64.dmg"
         },
-        "Linux": {
-          ".deb": {
-            "name": "avodocs_1.0.0_amd64.deb",
-            "size": "83.4MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.18/avodocs_1.0.0_amd64.deb"
-          },
-          ".AppImage": {
-            "name": "Avolites.Titan.Manual-1.0.0.AppImage",
-            "size": "109.9MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.18/Avolites.Titan.Manual-1.0.0.AppImage"
-          }
-        },
-        "Mac": {
-          ".zip": {
-            "name": "Avolites.Titan.Manual-1.0.0-mac.zip",
-            "size": "100.1MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.18/Avolites.Titan.Manual-1.0.0-mac.zip"
-          },
-          ".dmg": {
-            "name": "Avolites.Titan.Manual-1.0.0.dmg",
-            "size": "103.0MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.18/Avolites.Titan.Manual-1.0.0.dmg"
-          }
-        },
-        "PDF": {}
-      }
-    },
-    {
-      "version": "1.0.17",
-      "id": 30993265,
-      "url": "https://github.com/AvolitesLtd/TitanManual/releases/tag/1.0.17",
-      "prerelease": false,
-      "date": "2020-09-09T16:55:30Z",
-      "downloads": {
-        "Windows": {
-          "stand-alone": {
-            "name": "Avolites.Titan.Manual.1.0.0.exe",
-            "size": "77.6MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.17/Avolites.Titan.Manual.1.0.0.exe"
-          },
-          "installer": {
-            "name": "Avolites.Titan.Manual.Setup.1.0.0.exe",
-            "size": "77.8MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.17/Avolites.Titan.Manual.Setup.1.0.0.exe"
-          }
-        },
-        "Linux": {
-          ".deb": {
-            "name": "avodocs_1.0.0_amd64.deb",
-            "size": "83.4MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.17/avodocs_1.0.0_amd64.deb"
-          },
-          ".AppImage": {
-            "name": "Avolites.Titan.Manual-1.0.0.AppImage",
-            "size": "109.9MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.17/Avolites.Titan.Manual-1.0.0.AppImage"
-          }
-        },
-        "Mac": {
-          ".zip": {
-            "name": "Avolites.Titan.Manual-1.0.0-mac.zip",
-            "size": "100.1MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.17/Avolites.Titan.Manual-1.0.0-mac.zip"
-          },
-          ".dmg": {
-            "name": "Avolites.Titan.Manual-1.0.0.dmg",
-            "size": "103.0MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.17/Avolites.Titan.Manual-1.0.0.dmg"
-          }
-        },
-        "PDF": {
-          "12.0": {
-            "name": "Titan-12-0-2020-09-09-17-16-38.pdf",
-            "size": "31.2MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.17/Titan-12-0-2020-09-09-17-16-38.pdf"
-          },
-          "13.0": {
-            "name": "Titan-13-0-2020-09-09-17-13-56.pdf",
-            "size": "32.0MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.17/Titan-13-0-2020-09-09-17-13-56.pdf"
-          },
-          "Pre-Release": {
-            "name": "Titan-Pre-Release-2020-09-09-17-19-15.pdf",
-            "size": "32.1MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.17/Titan-Pre-Release-2020-09-09-17-19-15.pdf"
-          }
+        ".zip": {
+          "name": "Avolites.Manual-1.2.17-arm64-mac.zip",
+          "size": "381.7MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.108/Avolites.Manual-1.2.17-arm64-mac.zip"
         }
-      }
-    },
-    {
-      "version": "1.0.16",
-      "id": 30980563,
-      "url": "https://github.com/AvolitesLtd/TitanManual/releases/tag/1.0.16",
-      "prerelease": false,
-      "date": "2020-09-09T13:42:01Z",
-      "downloads": {
-        "Windows": {
-          "stand-alone": {
-            "name": "Avolites.Titan.Manual.1.0.0.exe",
-            "size": "77.6MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.16/Avolites.Titan.Manual.1.0.0.exe"
-          },
-          "installer": {
-            "name": "Avolites.Titan.Manual.Setup.1.0.0.exe",
-            "size": "77.8MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.16/Avolites.Titan.Manual.Setup.1.0.0.exe"
-          }
+      },
+      "PDF": {
+        "Prism Zero v1.3": {
+          "name": "Prism-Zero-v1-3.pdf",
+          "size": "3.0MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.108/Prism-Zero-v1-3.pdf"
         },
-        "Linux": {
-          ".deb": {
-            "name": "avodocs_1.0.0_amd64.deb",
-            "size": "83.4MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.16/avodocs_1.0.0_amd64.deb"
-          },
-          ".AppImage": {
-            "name": "Avolites.Titan.Manual-1.0.0.AppImage",
-            "size": "109.9MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.16/Avolites.Titan.Manual-1.0.0.AppImage"
-          }
+        "Prism Player v1.3": {
+          "name": "Prism-Player-v1-3.pdf",
+          "size": "2.0MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.108/Prism-Player-v1-3.pdf"
         },
-        "Mac": {
-          ".zip": {
-            "name": "Avolites.Titan.Manual-1.0.0-mac.zip",
-            "size": "100.1MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.16/Avolites.Titan.Manual-1.0.0-mac.zip"
-          },
-          ".dmg": {
-            "name": "Avolites.Titan.Manual-1.0.0.dmg",
-            "size": "103.0MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.16/Avolites.Titan.Manual-1.0.0.dmg"
-          }
+        "Prism v1.3": {
+          "name": "Prism-v1-3.pdf",
+          "size": "5.3MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.108/Prism-v1-3.pdf"
         },
-        "PDF": {
-          "12.0": {
-            "name": "Titan-12-0-2020-09-09-14-01-43.pdf",
-            "size": "31.2MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.16/Titan-12-0-2020-09-09-14-01-43.pdf"
-          },
-          "13.0": {
-            "name": "Titan-13-0-2020-09-09-13-58-57.pdf",
-            "size": "32.0MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.16/Titan-13-0-2020-09-09-13-58-57.pdf"
-          },
-          "Pre-Release": {
-            "name": "Titan-Pre-Release-2020-09-09-14-04-26.pdf",
-            "size": "32.1MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.16/Titan-Pre-Release-2020-09-09-14-04-26.pdf"
-          }
-        }
-      }
-    },
-    {
-      "version": "1.0.14",
-      "id": 30312494,
-      "url": "https://github.com/AvolitesLtd/TitanManual/releases/tag/1.0.14",
-      "prerelease": false,
-      "date": "2020-08-28T09:33:36Z",
-      "downloads": {
-        "Windows": {
-          "stand-alone": {
-            "name": "Avolites.Titan.Manual.1.0.0.exe",
-            "size": "78.7MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.14/Avolites.Titan.Manual.1.0.0.exe"
-          },
-          "installer": {
-            "name": "Avolites.Titan.Manual.Setup.1.0.0.exe",
-            "size": "78.8MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.14/Avolites.Titan.Manual.Setup.1.0.0.exe"
-          }
+        "12.0.en": {
+          "name": "Titan-12-0-en-2024-12-07-09-13-46.pdf",
+          "size": "29.8MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.108/Titan-12-0-en-2024-12-07-09-13-46.pdf"
         },
-        "Linux": {
-          ".deb": {
-            "name": "avodocs_1.0.0_amd64.deb",
-            "size": "84.2MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.14/avodocs_1.0.0_amd64.deb"
-          },
-          ".AppImage": {
-            "name": "Avolites.Titan.Manual-1.0.0.AppImage",
-            "size": "111.0MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.14/Avolites.Titan.Manual-1.0.0.AppImage"
-          }
+        "13.0.en": {
+          "name": "Titan-13-0-en-2024-12-07-09-11-31.pdf",
+          "size": "30.6MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.108/Titan-13-0-en-2024-12-07-09-11-31.pdf"
         },
-        "Mac": {
-          ".zip": {
-            "name": "Avolites.Titan.Manual-1.0.0-mac.zip",
-            "size": "101.1MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.14/Avolites.Titan.Manual-1.0.0-mac.zip"
-          },
-          ".dmg": {
-            "name": "Avolites.Titan.Manual-1.0.0.dmg",
-            "size": "104.0MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.14/Avolites.Titan.Manual-1.0.0.dmg"
-          }
+        "14.0.de": {
+          "name": "Titan-14-0-de-2024-12-07-08-51-12.pdf",
+          "size": "30.7MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.108/Titan-14-0-de-2024-12-07-08-51-12.pdf"
         },
-        "PDF": {
-          "12.0": {
-            "name": "Titan-12-0-2020-08-28-09-50-48.pdf",
-            "size": "30.8MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.14/Titan-12-0-2020-08-28-09-50-48.pdf"
-          },
-          "13.0": {
-            "name": "Titan-13-0-2020-08-28-09-48-11.pdf",
-            "size": "31.6MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.14/Titan-13-0-2020-08-28-09-48-11.pdf"
-          },
-          "Pre-Release": {
-            "name": "Titan-Latest-2020-08-28-09-53-18.pdf",
-            "size": "32.0MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.14/Titan-Latest-2020-08-28-09-53-18.pdf"
-          }
-        }
-      }
-    },
-    {
-      "version": "1.0.13",
-      "id": 29738642,
-      "url": "https://github.com/AvolitesLtd/TitanManual/releases/tag/1.0.13",
-      "prerelease": false,
-      "date": "2020-08-15T21:25:49Z",
-      "downloads": {
-        "Windows": {
-          "stand-alone": {
-            "name": "Avolites.Titan.Manual.0.1.5.exe",
-            "size": "78.7MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.13/Avolites.Titan.Manual.0.1.5.exe"
-          },
-          "installer": {
-            "name": "Avolites.Titan.Manual.Setup.0.1.5.exe",
-            "size": "78.9MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.13/Avolites.Titan.Manual.Setup.0.1.5.exe"
-          }
+        "14.0.en": {
+          "name": "Titan-14-0-en-2024-12-07-09-09-15.pdf",
+          "size": "31.2MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.108/Titan-14-0-en-2024-12-07-09-09-15.pdf"
         },
-        "Linux": {
-          ".deb": {
-            "name": "avodocs_0.1.5_amd64.deb",
-            "size": "84.6MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.13/avodocs_0.1.5_amd64.deb"
-          },
-          ".AppImage": {
-            "name": "Avolites.Titan.Manual-0.1.5.AppImage",
-            "size": "111.1MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.13/Avolites.Titan.Manual-0.1.5.AppImage"
-          }
+        "15.0.de": {
+          "name": "Titan-15-0-de-2024-12-07-08-47-51.pdf",
+          "size": "38.6MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.108/Titan-15-0-de-2024-12-07-08-47-51.pdf"
         },
-        "Mac": {
-          ".zip": {
-            "name": "Avolites.Titan.Manual-0.1.5-mac.zip",
-            "size": "101.1MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.13/Avolites.Titan.Manual-0.1.5-mac.zip"
-          },
-          ".dmg": {
-            "name": "Avolites.Titan.Manual-0.1.5.dmg",
-            "size": "104.1MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.13/Avolites.Titan.Manual-0.1.5.dmg"
-          }
+        "15.0.en": {
+          "name": "Titan-15-0-en-2024-12-07-09-05-54.pdf",
+          "size": "38.5MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.108/Titan-15-0-en-2024-12-07-09-05-54.pdf"
         },
-        "PDF": {}
-      }
-    },
-    {
-      "version": "1.0.12",
-      "id": 29738394,
-      "url": "https://github.com/AvolitesLtd/TitanManual/releases/tag/1.0.12",
-      "prerelease": false,
-      "date": "2020-08-15T20:57:55Z",
-      "downloads": {
-        "Windows": {
-          "stand-alone": {
-            "name": "Avolites.Titan.Manual.0.1.5.exe",
-            "size": "78.7MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.12/Avolites.Titan.Manual.0.1.5.exe"
-          },
-          "installer": {
-            "name": "Avolites.Titan.Manual.Setup.0.1.5.exe",
-            "size": "78.9MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.12/Avolites.Titan.Manual.Setup.0.1.5.exe"
-          }
+        "15.1.de": {
+          "name": "Titan-15-1-de-2024-12-07-08-44-29.pdf",
+          "size": "38.7MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.108/Titan-15-1-de-2024-12-07-08-44-29.pdf"
         },
-        "Linux": {
-          ".deb": {
-            "name": "avodocs_0.1.5_amd64.deb",
-            "size": "84.6MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.12/avodocs_0.1.5_amd64.deb"
-          },
-          ".AppImage": {
-            "name": "Avolites.Titan.Manual-0.1.5.AppImage",
-            "size": "111.0MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.12/Avolites.Titan.Manual-0.1.5.AppImage"
-          }
+        "15.1.en": {
+          "name": "Titan-15-1-en-2024-12-07-09-02-33.pdf",
+          "size": "38.6MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.108/Titan-15-1-en-2024-12-07-09-02-33.pdf"
         },
-        "Mac": {
-          ".zip": {
-            "name": "Avolites.Titan.Manual-0.1.5-mac.zip",
-            "size": "101.1MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.12/Avolites.Titan.Manual-0.1.5-mac.zip"
-          },
-          ".dmg": {
-            "name": "Avolites.Titan.Manual-0.1.5.dmg",
-            "size": "104.0MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.12/Avolites.Titan.Manual-0.1.5.dmg"
-          }
+        "17.0.de": {
+          "name": "Titan-17-0-de-2024-12-07-08-37-37.pdf",
+          "size": "46.9MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.108/Titan-17-0-de-2024-12-07-08-37-37.pdf"
         },
-        "PDF": {}
-      }
-    },
-    {
-      "version": "1.0.11",
-      "id": 29516979,
-      "url": "https://github.com/AvolitesLtd/TitanManual/releases/tag/1.0.11",
-      "prerelease": false,
-      "date": "2020-08-10T15:15:34Z",
-      "downloads": {
-        "Windows": {
-          "stand-alone": {
-            "name": "Avolites.Titan.Manual.0.1.5.exe",
-            "size": "78.7MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.11/Avolites.Titan.Manual.0.1.5.exe"
-          },
-          "installer": {
-            "name": "Avolites.Titan.Manual.Setup.0.1.5.exe",
-            "size": "78.8MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.11/Avolites.Titan.Manual.Setup.0.1.5.exe"
-          }
+        "17.0.en": {
+          "name": "Titan-17-0-en-2024-12-07-08-55-43.pdf",
+          "size": "46.8MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.108/Titan-17-0-en-2024-12-07-08-55-43.pdf"
         },
-        "Linux": {
-          ".deb": {
-            "name": "avodocs_0.1.5_amd64.deb",
-            "size": "84.6MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.11/avodocs_0.1.5_amd64.deb"
-          },
-          ".AppImage": {
-            "name": "Avolites.Titan.Manual-0.1.5.AppImage",
-            "size": "110.6MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.11/Avolites.Titan.Manual-0.1.5.AppImage"
-          }
+        "16.0.en": {
+          "name": "Titan-16-0-en-2024-12-07-08-59-13.pdf",
+          "size": "39.4MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.108/Titan-16-0-en-2024-12-07-08-59-13.pdf"
         },
-        "Mac": {
-          ".zip": {
-            "name": "Avolites.Titan.Manual-0.1.5-mac.zip",
-            "size": "100.8MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.11/Avolites.Titan.Manual-0.1.5-mac.zip"
-          },
-          ".dmg": {
-            "name": "Avolites.Titan.Manual-0.1.5.dmg",
-            "size": "103.7MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.11/Avolites.Titan.Manual-0.1.5.dmg"
-          }
+        "Pre-Release.en": {
+          "name": "Titan-Pre-Release-en-2024-12-07-08-34-04.pdf",
+          "size": "47.4MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.108/Titan-Pre-Release-en-2024-12-07-08-34-04.pdf"
         },
-        "PDF": {}
-      }
-    },
-    {
-      "version": "1.0.10",
-      "id": 28829528,
-      "url": "https://github.com/AvolitesLtd/TitanManual/releases/tag/1.0.10",
-      "prerelease": false,
-      "date": "2020-07-22T14:09:59Z",
-      "downloads": {
-        "Windows": {
-          "stand-alone": {
-            "name": "Avolites.Titan.Manual.0.1.4.exe",
-            "size": "78.0MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.10/Avolites.Titan.Manual.0.1.4.exe"
-          },
-          "installer": {
-            "name": "Avolites.Titan.Manual.Setup.0.1.4.exe",
-            "size": "78.2MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.10/Avolites.Titan.Manual.Setup.0.1.4.exe"
-          }
+        "13.0.de": {
+          "name": "Titan-13-0-de-2024-12-07-08-53-28.pdf",
+          "size": "30.8MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.108/Titan-13-0-de-2024-12-07-08-53-28.pdf"
         },
-        "Linux": {
-          ".deb": {
-            "name": "avodocs_0.1.4_amd64.deb",
-            "size": "83.4MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.10/avodocs_0.1.4_amd64.deb"
-          },
-          ".AppImage": {
-            "name": "Avolites.Titan.Manual-0.1.4.AppImage",
-            "size": "109.9MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.10/Avolites.Titan.Manual-0.1.4.AppImage"
-          }
-        },
-        "Mac": {
-          ".zip": {
-            "name": "Avolites.Titan.Manual-0.1.4-mac.zip",
-            "size": "100.1MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.10/Avolites.Titan.Manual-0.1.4-mac.zip"
-          },
-          ".dmg": {
-            "name": "Avolites.Titan.Manual-0.1.4.dmg",
-            "size": "102.9MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.10/Avolites.Titan.Manual-0.1.4.dmg"
-          }
-        },
-        "PDF": {
-          "12.0": {
-            "name": "Titan-12-0-2020-07-22-14-23-51.pdf",
-            "size": "31.1MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.10/Titan-12-0-2020-07-22-14-23-51.pdf"
-          },
-          "13.0": {
-            "name": "Titan-13-0-2020-07-22-14-21-24.pdf",
-            "size": "31.9MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.10/Titan-13-0-2020-07-22-14-21-24.pdf"
-          },
-          "Pre-Release": {
-            "name": "Titan-Latest-2020-07-22-14-26-15.pdf",
-            "size": "31.9MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.10/Titan-Latest-2020-07-22-14-26-15.pdf"
-          }
-        }
-      }
-    },
-    {
-      "version": "1.0.8",
-      "id": 28781874,
-      "url": "https://github.com/AvolitesLtd/TitanManual/releases/tag/1.0.8",
-      "prerelease": false,
-      "date": "2020-07-21T13:18:03Z",
-      "downloads": {
-        "Windows": {
-          "stand-alone": {
-            "name": "Avolites.Titan.Manual.0.1.3.exe",
-            "size": "78.0MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.8/Avolites.Titan.Manual.0.1.3.exe"
-          },
-          "installer": {
-            "name": "Avolites.Titan.Manual.Setup.0.1.3.exe",
-            "size": "78.2MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.8/Avolites.Titan.Manual.Setup.0.1.3.exe"
-          }
-        },
-        "Linux": {
-          ".deb": {
-            "name": "avodocs_0.1.3_amd64.deb",
-            "size": "83.4MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.8/avodocs_0.1.3_amd64.deb"
-          },
-          ".AppImage": {
-            "name": "Avolites.Titan.Manual-0.1.3.AppImage",
-            "size": "109.9MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.8/Avolites.Titan.Manual-0.1.3.AppImage"
-          }
-        },
-        "Mac": {
-          ".zip": {
-            "name": "Avolites.Titan.Manual-0.1.3-mac.zip",
-            "size": "100.1MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.8/Avolites.Titan.Manual-0.1.3-mac.zip"
-          },
-          ".dmg": {
-            "name": "Avolites.Titan.Manual-0.1.3.dmg",
-            "size": "102.9MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.8/Avolites.Titan.Manual-0.1.3.dmg"
-          }
-        },
-        "PDF": {
-          "12.0": {
-            "name": "Titan-12-0-2020-07-21-13-31-41.pdf",
-            "size": "31.1MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.8/Titan-12-0-2020-07-21-13-31-41.pdf"
-          },
-          "13.0": {
-            "name": "Titan-13-0-2020-07-21-13-29-30.pdf",
-            "size": "31.9MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.8/Titan-13-0-2020-07-21-13-29-30.pdf"
-          },
-          "Pre-Release": {
-            "name": "Titan-Latest-2020-07-21-13-33-49.pdf",
-            "size": "31.9MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.8/Titan-Latest-2020-07-21-13-33-49.pdf"
-          }
-        }
-      }
-    },
-    {
-      "version": "1.0.7",
-      "id": 28442252,
-      "url": "https://github.com/AvolitesLtd/TitanManual/releases/tag/1.0.7",
-      "prerelease": false,
-      "date": "2020-07-10T13:38:47Z",
-      "downloads": {
-        "Windows": {
-          "stand-alone": {
-            "name": "Avolites.Titan.Manual.0.1.2.exe",
-            "size": "78.0MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.7/Avolites.Titan.Manual.0.1.2.exe"
-          },
-          "installer": {
-            "name": "Avolites.Titan.Manual.Setup.0.1.2.exe",
-            "size": "78.2MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.7/Avolites.Titan.Manual.Setup.0.1.2.exe"
-          }
-        },
-        "Linux": {
-          ".deb": {
-            "name": "avodocs_0.1.2_amd64.deb",
-            "size": "83.9MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.7/avodocs_0.1.2_amd64.deb"
-          },
-          ".AppImage": {
-            "name": "Avolites.Titan.Manual-0.1.2.AppImage",
-            "size": "110.0MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.7/Avolites.Titan.Manual-0.1.2.AppImage"
-          }
-        },
-        "Mac": {
-          ".zip": {
-            "name": "Avolites.Titan.Manual-0.1.2-mac.zip",
-            "size": "100.1MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.7/Avolites.Titan.Manual-0.1.2-mac.zip"
-          },
-          ".dmg": {
-            "name": "Avolites.Titan.Manual-0.1.2.dmg",
-            "size": "102.9MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.7/Avolites.Titan.Manual-0.1.2.dmg"
-          }
-        },
-        "PDF": {}
-      }
-    },
-    {
-      "version": "1.0.6",
-      "id": 28123883,
-      "url": "https://github.com/AvolitesLtd/TitanManual/releases/tag/1.0.6",
-      "prerelease": false,
-      "date": "2020-07-01T16:43:39Z",
-      "downloads": {
-        "Windows": {
-          "stand-alone": {
-            "name": "Avolites.Titan.Manual.0.1.1.exe",
-            "size": "78.0MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.6/Avolites.Titan.Manual.0.1.1.exe"
-          },
-          "installer": {
-            "name": "Avolites.Titan.Manual.Setup.0.1.1.exe",
-            "size": "78.2MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.6/Avolites.Titan.Manual.Setup.0.1.1.exe"
-          }
-        },
-        "Linux": {
-          ".deb": {
-            "name": "avodocs_0.1.1_amd64.deb",
-            "size": "83.9MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.6/avodocs_0.1.1_amd64.deb"
-          },
-          ".AppImage": {
-            "name": "Avolites.Titan.Manual-0.1.1.AppImage",
-            "size": "110.0MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.6/Avolites.Titan.Manual-0.1.1.AppImage"
-          }
-        },
-        "Mac": {
-          ".zip": {
-            "name": "Avolites.Titan.Manual-0.1.1-mac.zip",
-            "size": "100.1MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.6/Avolites.Titan.Manual-0.1.1-mac.zip"
-          },
-          ".dmg": {
-            "name": "Avolites.Titan.Manual-0.1.1.dmg",
-            "size": "102.9MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.6/Avolites.Titan.Manual-0.1.1.dmg"
-          }
-        },
-        "PDF": {
-          "12.0": {
-            "name": "Titan-12-0-2020-07-01-16-58-29.pdf",
-            "size": "31.1MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.6/Titan-12-0-2020-07-01-16-58-29.pdf"
-          },
-          "13.0": {
-            "name": "Titan-13-0-2020-07-01-16-55-26.pdf",
-            "size": "31.9MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.6/Titan-13-0-2020-07-01-16-55-26.pdf"
-          },
-          "Pre-Release": {
-            "name": "Titan-Latest-2020-07-01-17-01-25.pdf",
-            "size": "31.9MB",
-            "url": "https://github.com/AvolitesLtd/TitanManual/releases/download/1.0.6/Titan-Latest-2020-07-01-17-01-25.pdf"
-          }
+        "16.0.de": {
+          "name": "Titan-16-0-de-2024-12-07-08-41-08.pdf",
+          "size": "39.5MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.108/Titan-16-0-de-2024-12-07-08-41-08.pdf"
         }
       }
     }
-  ]
+  },
+  {
+    "version": "0.0.107",
+    "id": 189462653,
+    "url": "https://github.com/icke-siegen/TitanManual/releases/tag/0.0.107",
+    "prerelease": false,
+    "date": "2024-12-06T18:23:03Z",
+    "downloads": {
+      "Windows": {
+        "installer": {
+          "name": "Avolites.Manual.Setup.1.2.17.exe",
+          "size": "351.0MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.107/Avolites.Manual.Setup.1.2.17.exe"
+        }
+      },
+      "Linux": {
+        ".deb": {
+          "name": "avodocs_1.2.17_amd64.deb",
+          "size": "331.9MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.107/avodocs_1.2.17_amd64.deb"
+        },
+        ".AppImage": {
+          "name": "Avolites.Manual-1.2.17.AppImage",
+          "size": "389.8MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.107/Avolites.Manual-1.2.17.AppImage"
+        }
+      },
+      "Mac": {
+        ".zip": {
+          "name": "Avolites.Manual-1.2.17-arm64-mac.zip",
+          "size": "381.7MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.107/Avolites.Manual-1.2.17-arm64-mac.zip"
+        },
+        ".dmg": {
+          "name": "Avolites.Manual-1.2.17-arm64.dmg",
+          "size": "389.0MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.107/Avolites.Manual-1.2.17-arm64.dmg"
+        }
+      },
+      "PDF": {
+        "Prism Player v1.3": {
+          "name": "Prism-Player-v1-3.pdf",
+          "size": "2.0MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.107/Prism-Player-v1-3.pdf"
+        },
+        "Prism v1.3": {
+          "name": "Prism-v1-3.pdf",
+          "size": "5.3MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.107/Prism-v1-3.pdf"
+        },
+        "Prism Zero v1.3": {
+          "name": "Prism-Zero-v1-3.pdf",
+          "size": "3.0MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.107/Prism-Zero-v1-3.pdf"
+        },
+        "13.0.de": {
+          "name": "Titan-13-0-de-2024-12-06-18-45-21.pdf",
+          "size": "30.8MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.107/Titan-13-0-de-2024-12-06-18-45-21.pdf"
+        },
+        "13.0.en": {
+          "name": "Titan-13-0-en-2024-12-06-19-03-27.pdf",
+          "size": "30.6MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.107/Titan-13-0-en-2024-12-06-19-03-27.pdf"
+        },
+        "12.0.en": {
+          "name": "Titan-12-0-en-2024-12-06-19-05-42.pdf",
+          "size": "29.8MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.107/Titan-12-0-en-2024-12-06-19-05-42.pdf"
+        },
+        "14.0.de": {
+          "name": "Titan-14-0-de-2024-12-06-18-43-05.pdf",
+          "size": "30.7MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.107/Titan-14-0-de-2024-12-06-18-43-05.pdf"
+        },
+        "15.0.en": {
+          "name": "Titan-15-0-en-2024-12-06-18-57-49.pdf",
+          "size": "38.5MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.107/Titan-15-0-en-2024-12-06-18-57-49.pdf"
+        },
+        "15.1.de": {
+          "name": "Titan-15-1-de-2024-12-06-18-36-22.pdf",
+          "size": "38.7MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.107/Titan-15-1-de-2024-12-06-18-36-22.pdf"
+        },
+        "14.0.en": {
+          "name": "Titan-14-0-en-2024-12-06-19-01-10.pdf",
+          "size": "31.2MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.107/Titan-14-0-en-2024-12-06-19-01-10.pdf"
+        },
+        "16.0.en": {
+          "name": "Titan-16-0-en-2024-12-06-18-51-07.pdf",
+          "size": "39.4MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.107/Titan-16-0-en-2024-12-06-18-51-07.pdf"
+        },
+        "17.0.de": {
+          "name": "Titan-17-0-de-2024-12-06-18-29-29.pdf",
+          "size": "46.9MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.107/Titan-17-0-de-2024-12-06-18-29-29.pdf"
+        },
+        "15.0.de": {
+          "name": "Titan-15-0-de-2024-12-06-18-39-44.pdf",
+          "size": "38.6MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.107/Titan-15-0-de-2024-12-06-18-39-44.pdf"
+        },
+        "16.0.de": {
+          "name": "Titan-16-0-de-2024-12-06-18-33-00.pdf",
+          "size": "39.5MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.107/Titan-16-0-de-2024-12-06-18-33-00.pdf"
+        },
+        "17.0.en": {
+          "name": "Titan-17-0-en-2024-12-06-18-47-37.pdf",
+          "size": "46.8MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.107/Titan-17-0-en-2024-12-06-18-47-37.pdf"
+        },
+        "15.1.en": {
+          "name": "Titan-15-1-en-2024-12-06-18-54-28.pdf",
+          "size": "38.6MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.107/Titan-15-1-en-2024-12-06-18-54-28.pdf"
+        },
+        "Pre-Release.en": {
+          "name": "Titan-Pre-Release-en-2024-12-06-18-25-56.pdf",
+          "size": "47.4MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.107/Titan-Pre-Release-en-2024-12-06-18-25-56.pdf"
+        }
+      }
+    }
+  },
+  {
+    "version": "0.0.106",
+    "id": 189456485,
+    "url": "https://github.com/icke-siegen/TitanManual/releases/tag/0.0.106",
+    "prerelease": false,
+    "date": "2024-12-06T17:51:05Z",
+    "downloads": {
+      "Windows": {
+        "installer": {
+          "name": "Avolites.Manual.Setup.1.2.17.exe",
+          "size": "351.0MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.106/Avolites.Manual.Setup.1.2.17.exe"
+        }
+      },
+      "Linux": {
+        ".deb": {
+          "name": "avodocs_1.2.17_amd64.deb",
+          "size": "331.9MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.106/avodocs_1.2.17_amd64.deb"
+        },
+        ".AppImage": {
+          "name": "Avolites.Manual-1.2.17.AppImage",
+          "size": "389.8MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.106/Avolites.Manual-1.2.17.AppImage"
+        }
+      },
+      "Mac": {
+        ".dmg": {
+          "name": "Avolites.Manual-1.2.17-arm64.dmg",
+          "size": "389.0MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.106/Avolites.Manual-1.2.17-arm64.dmg"
+        },
+        ".zip": {
+          "name": "Avolites.Manual-1.2.17-arm64-mac.zip",
+          "size": "381.7MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.106/Avolites.Manual-1.2.17-arm64-mac.zip"
+        }
+      },
+      "PDF": {
+        "Prism Player v1.3": {
+          "name": "Prism-Player-v1-3.pdf",
+          "size": "2.0MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.106/Prism-Player-v1-3.pdf"
+        },
+        "Prism Zero v1.3": {
+          "name": "Prism-Zero-v1-3.pdf",
+          "size": "3.0MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.106/Prism-Zero-v1-3.pdf"
+        },
+        "Prism v1.3": {
+          "name": "Prism-v1-3.pdf",
+          "size": "5.3MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.106/Prism-v1-3.pdf"
+        }
+      }
+    }
+  },
+  {
+    "version": "0.0.105",
+    "id": 189450871,
+    "url": "https://github.com/icke-siegen/TitanManual/releases/tag/0.0.105",
+    "prerelease": false,
+    "date": "2024-12-06T17:25:35Z",
+    "downloads": {
+      "Windows": {
+        "installer": {
+          "name": "Avolites.Manual.Setup.1.2.17.exe",
+          "size": "351.0MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.105/Avolites.Manual.Setup.1.2.17.exe"
+        }
+      },
+      "Linux": {
+        ".AppImage": {
+          "name": "Avolites.Manual-1.2.17.AppImage",
+          "size": "389.8MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.105/Avolites.Manual-1.2.17.AppImage"
+        },
+        ".deb": {
+          "name": "avodocs_1.2.17_amd64.deb",
+          "size": "331.9MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.105/avodocs_1.2.17_amd64.deb"
+        }
+      },
+      "Mac": {
+        ".dmg": {
+          "name": "Avolites.Manual-1.2.17-arm64.dmg",
+          "size": "389.0MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.105/Avolites.Manual-1.2.17-arm64.dmg"
+        }
+      },
+      "PDF": {
+        "Prism Player v1.3": {
+          "name": "Prism-Player-v1-3.pdf",
+          "size": "2.0MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.105/Prism-Player-v1-3.pdf"
+        },
+        "Prism v1.3": {
+          "name": "Prism-v1-3.pdf",
+          "size": "5.3MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.105/Prism-v1-3.pdf"
+        },
+        "Prism Zero v1.3": {
+          "name": "Prism-Zero-v1-3.pdf",
+          "size": "3.0MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.105/Prism-Zero-v1-3.pdf"
+        }
+      }
+    }
+  },
+  {
+    "version": "0.0.104",
+    "id": 189446019,
+    "url": "https://github.com/icke-siegen/TitanManual/releases/tag/0.0.104",
+    "prerelease": false,
+    "date": "2024-12-06T16:56:36Z",
+    "downloads": {
+      "Windows": {
+        "installer": {
+          "name": "Avolites.Manual.Setup.1.2.17.exe",
+          "size": "351.0MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.104/Avolites.Manual.Setup.1.2.17.exe"
+        }
+      },
+      "Linux": {
+        ".deb": {
+          "name": "avodocs_1.2.17_amd64.deb",
+          "size": "331.9MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.104/avodocs_1.2.17_amd64.deb"
+        },
+        ".AppImage": {
+          "name": "Avolites.Manual-1.2.17.AppImage",
+          "size": "389.8MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.104/Avolites.Manual-1.2.17.AppImage"
+        }
+      },
+      "Mac": {
+        ".dmg": {
+          "name": "Avolites.Manual-1.2.17-arm64.dmg",
+          "size": "389.0MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.104/Avolites.Manual-1.2.17-arm64.dmg"
+        },
+        ".zip": {
+          "name": "Avolites.Manual-1.2.17-arm64-mac.zip",
+          "size": "381.7MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.104/Avolites.Manual-1.2.17-arm64-mac.zip"
+        }
+      },
+      "PDF": {
+        "Prism Player v1.3": {
+          "name": "Prism-Player-v1-3.pdf",
+          "size": "2.0MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.104/Prism-Player-v1-3.pdf"
+        },
+        "Prism v1.3": {
+          "name": "Prism-v1-3.pdf",
+          "size": "5.3MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.104/Prism-v1-3.pdf"
+        },
+        "Prism Zero v1.3": {
+          "name": "Prism-Zero-v1-3.pdf",
+          "size": "3.0MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.104/Prism-Zero-v1-3.pdf"
+        }
+      }
+    }
+  },
+  {
+    "version": "0.0.103",
+    "id": 189432184,
+    "url": "https://github.com/icke-siegen/TitanManual/releases/tag/0.0.103",
+    "prerelease": false,
+    "date": "2024-12-06T15:38:14Z",
+    "downloads": {
+      "Windows": {
+        "installer": {
+          "name": "Avolites.Manual.Setup.1.2.17.exe",
+          "size": "351.0MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.103/Avolites.Manual.Setup.1.2.17.exe"
+        }
+      },
+      "Linux": {
+        ".deb": {
+          "name": "avodocs_1.2.17_amd64.deb",
+          "size": "332.0MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.103/avodocs_1.2.17_amd64.deb"
+        },
+        ".AppImage": {
+          "name": "Avolites.Manual-1.2.17.AppImage",
+          "size": "389.8MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.103/Avolites.Manual-1.2.17.AppImage"
+        }
+      },
+      "Mac": {
+        ".zip": {
+          "name": "Avolites.Manual-1.2.17-arm64-mac.zip",
+          "size": "381.7MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.103/Avolites.Manual-1.2.17-arm64-mac.zip"
+        },
+        ".dmg": {
+          "name": "Avolites.Manual-1.2.17-arm64.dmg",
+          "size": "389.0MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.103/Avolites.Manual-1.2.17-arm64.dmg"
+        }
+      },
+      "PDF": {
+        "Prism Player v1.3": {
+          "name": "Prism-Player-v1-3.pdf",
+          "size": "2.0MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.103/Prism-Player-v1-3.pdf"
+        },
+        "Prism Zero v1.3": {
+          "name": "Prism-Zero-v1-3.pdf",
+          "size": "3.0MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.103/Prism-Zero-v1-3.pdf"
+        },
+        "Prism v1.3": {
+          "name": "Prism-v1-3.pdf",
+          "size": "5.3MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.103/Prism-v1-3.pdf"
+        },
+        "16.0.en": {
+          "name": "Titan-16-0-en-2024-12-06-16-06-22.pdf",
+          "size": "39.4MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.103/Titan-16-0-en-2024-12-06-16-06-22.pdf"
+        },
+        "15.1.en": {
+          "name": "Titan-15-1-en-2024-12-06-16-09-43.pdf",
+          "size": "38.6MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.103/Titan-15-1-en-2024-12-06-16-09-43.pdf"
+        },
+        "17.0.de": {
+          "name": "Titan-17-0-de-2024-12-06-15-44-44.pdf",
+          "size": "46.9MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.103/Titan-17-0-de-2024-12-06-15-44-44.pdf"
+        },
+        "13.0.de": {
+          "name": "Titan-13-0-de-2024-12-06-16-00-37.pdf",
+          "size": "30.8MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.103/Titan-13-0-de-2024-12-06-16-00-37.pdf"
+        },
+        "14.0.de": {
+          "name": "Titan-14-0-de-2024-12-06-15-58-21.pdf",
+          "size": "30.7MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.103/Titan-14-0-de-2024-12-06-15-58-21.pdf"
+        },
+        "13.0.en": {
+          "name": "Titan-13-0-en-2024-12-06-16-18-43.pdf",
+          "size": "30.6MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.103/Titan-13-0-en-2024-12-06-16-18-43.pdf"
+        },
+        "15.0.de": {
+          "name": "Titan-15-0-de-2024-12-06-15-54-59.pdf",
+          "size": "38.6MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.103/Titan-15-0-de-2024-12-06-15-54-59.pdf"
+        },
+        "14.0.en": {
+          "name": "Titan-14-0-en-2024-12-06-16-16-25.pdf",
+          "size": "31.2MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.103/Titan-14-0-en-2024-12-06-16-16-25.pdf"
+        },
+        "15.1.de": {
+          "name": "Titan-15-1-de-2024-12-06-15-51-37.pdf",
+          "size": "38.7MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.103/Titan-15-1-de-2024-12-06-15-51-37.pdf"
+        },
+        "16.0.de": {
+          "name": "Titan-16-0-de-2024-12-06-15-48-15.pdf",
+          "size": "39.5MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.103/Titan-16-0-de-2024-12-06-15-48-15.pdf"
+        },
+        "15.0.en": {
+          "name": "Titan-15-0-en-2024-12-06-16-13-04.pdf",
+          "size": "38.5MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.103/Titan-15-0-en-2024-12-06-16-13-04.pdf"
+        },
+        "12.0.en": {
+          "name": "Titan-12-0-en-2024-12-06-16-20-58.pdf",
+          "size": "29.8MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.103/Titan-12-0-en-2024-12-06-16-20-58.pdf"
+        },
+        "Pre-Release.en": {
+          "name": "Titan-Pre-Release-en-2024-12-06-15-41-12.pdf",
+          "size": "47.4MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.103/Titan-Pre-Release-en-2024-12-06-15-41-12.pdf"
+        },
+        "17.0.en": {
+          "name": "Titan-17-0-en-2024-12-06-16-02-52.pdf",
+          "size": "46.8MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.103/Titan-17-0-en-2024-12-06-16-02-52.pdf"
+        }
+      }
+    }
+  },
+  {
+    "version": "0.0.101",
+    "id": 189396518,
+    "url": "https://github.com/icke-siegen/TitanManual/releases/tag/0.0.101",
+    "prerelease": false,
+    "date": "2024-12-06T12:39:03Z",
+    "downloads": {
+      "Windows": {
+        "installer": {
+          "name": "Avolites.Manual.Setup.1.2.17.exe",
+          "size": "351.0MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.101/Avolites.Manual.Setup.1.2.17.exe"
+        }
+      },
+      "Linux": {
+        ".deb": {
+          "name": "avodocs_1.2.17_amd64.deb",
+          "size": "331.9MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.101/avodocs_1.2.17_amd64.deb"
+        },
+        ".AppImage": {
+          "name": "Avolites.Manual-1.2.17.AppImage",
+          "size": "389.8MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.101/Avolites.Manual-1.2.17.AppImage"
+        }
+      },
+      "Mac": {
+        ".zip": {
+          "name": "Avolites.Manual-1.2.17-arm64-mac.zip",
+          "size": "381.7MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.101/Avolites.Manual-1.2.17-arm64-mac.zip"
+        },
+        ".dmg": {
+          "name": "Avolites.Manual-1.2.17-arm64.dmg",
+          "size": "389.0MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.101/Avolites.Manual-1.2.17-arm64.dmg"
+        }
+      },
+      "PDF": {
+        "Prism Player v1.3": {
+          "name": "Prism-Player-v1-3.pdf",
+          "size": "2.0MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.101/Prism-Player-v1-3.pdf"
+        },
+        "Prism v1.3": {
+          "name": "Prism-v1-3.pdf",
+          "size": "5.3MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.101/Prism-v1-3.pdf"
+        },
+        "Prism Zero v1.3": {
+          "name": "Prism-Zero-v1-3.pdf",
+          "size": "3.0MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.101/Prism-Zero-v1-3.pdf"
+        },
+        "13.0.en": {
+          "name": "Titan-13-0-en-2024-12-06-13-19-50.pdf",
+          "size": "30.6MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.101/Titan-13-0-en-2024-12-06-13-19-50.pdf"
+        },
+        "14.0.en": {
+          "name": "Titan-14-0-en-2024-12-06-13-17-33.pdf",
+          "size": "31.2MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.101/Titan-14-0-en-2024-12-06-13-17-33.pdf"
+        },
+        "12.0.en": {
+          "name": "Titan-12-0-en-2024-12-06-13-22-05.pdf",
+          "size": "29.8MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.101/Titan-12-0-en-2024-12-06-13-22-05.pdf"
+        },
+        "15.0.en": {
+          "name": "Titan-15-0-en-2024-12-06-13-14-12.pdf",
+          "size": "38.5MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.101/Titan-15-0-en-2024-12-06-13-14-12.pdf"
+        },
+        "15.0.de": {
+          "name": "Titan-15-0-de-2024-12-06-12-56-08.pdf",
+          "size": "38.6MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.101/Titan-15-0-de-2024-12-06-12-56-08.pdf"
+        },
+        "16.0.de": {
+          "name": "Titan-16-0-de-2024-12-06-12-49-24.pdf",
+          "size": "39.5MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.101/Titan-16-0-de-2024-12-06-12-49-24.pdf"
+        },
+        "14.0.de": {
+          "name": "Titan-14-0-de-2024-12-06-12-59-29.pdf",
+          "size": "30.7MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.101/Titan-14-0-de-2024-12-06-12-59-29.pdf"
+        },
+        "16.0.en": {
+          "name": "Titan-16-0-en-2024-12-06-13-07-31.pdf",
+          "size": "39.4MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.101/Titan-16-0-en-2024-12-06-13-07-31.pdf"
+        },
+        "15.1.de": {
+          "name": "Titan-15-1-de-2024-12-06-12-52-46.pdf",
+          "size": "38.7MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.101/Titan-15-1-de-2024-12-06-12-52-46.pdf"
+        },
+        "15.1.en": {
+          "name": "Titan-15-1-en-2024-12-06-13-10-51.pdf",
+          "size": "38.6MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.101/Titan-15-1-en-2024-12-06-13-10-51.pdf"
+        },
+        "Pre-Release.en": {
+          "name": "Titan-Pre-Release-en-2024-12-06-12-42-21.pdf",
+          "size": "47.4MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.101/Titan-Pre-Release-en-2024-12-06-12-42-21.pdf"
+        },
+        "17.0.de": {
+          "name": "Titan-17-0-de-2024-12-06-12-45-53.pdf",
+          "size": "46.9MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.101/Titan-17-0-de-2024-12-06-12-45-53.pdf"
+        },
+        "13.0.de": {
+          "name": "Titan-13-0-de-2024-12-06-13-01-45.pdf",
+          "size": "30.8MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.101/Titan-13-0-de-2024-12-06-13-01-45.pdf"
+        },
+        "17.0.en": {
+          "name": "Titan-17-0-en-2024-12-06-13-04-00.pdf",
+          "size": "46.8MB",
+          "url": "https://github.com/icke-siegen/TitanManual/releases/download/0.0.101/Titan-17-0-en-2024-12-06-13-04-00.pdf"
+        }
+      }
+    }
+  }
+]

@@ -4,15 +4,27 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
+
 import React, { useEffect, useState } from "react";
 import versions from "@site/versions.json"
 import Layout from "@theme/Layout"; 
 import downloads from "@site/static/download/download.json"
 
+/*
+const versions = require("../../versions.json")
+const downloads = require("../../static/download/download.json");
+const var_dump = require('var_dump');
+
+console.log("versions.js called");
+var_dump(downloads[0].downloads.PDF["16.0.de"]);
+var_dump(downloads[0].downloads.PDF["16.0.en"]);
+console.log(PDF(downloads,"15.0"));
+*/
+
 /**
 * Returns the index of downloads which holds the latest PDF for that version
 * @param {array} downloads 
-* @param {string} version 
+* @param {string} version, e.g. '15.1.en'
 */
 function latestPDF(downloads, version) {
  for (let i in downloads)
@@ -25,22 +37,52 @@ function latestPDF(downloads, version) {
 * 
 * @param {array} downloads 
 * @param {string} version 
+* supposed to return the string with german and english links
 */
 function PDF(downloads,version) {
- if(latestPDF(downloads,version) > -1) {
-   let download = downloads[latestPDF(downloads,version)]
-   let pdf = download.downloads.PDF[version]
-
-   return (
-     <div>
-       <a
-         href={pdf.url} download>
-         PDF
-       </a>
-       &nbsp;&nbsp;
-       <em>{`${pdf.size} (${formatDate(download.date)})`}</em>
-     </div>
-   )
+ let version_en = version + ".en";
+ let version_de = version + ".de";
+ if(latestPDF(downloads,version_en) > -1) {
+   let download = downloads[latestPDF(downloads,version_en)]
+   let pdf_en = download.downloads.PDF[version_en]
+   let pdf_de = {
+     name: "",
+     size: "",
+     url: ""
+   }
+   if(latestPDF(downloads,version_de) > -1) {
+     pdf_de = download.downloads.PDF[version_de]
+     return (
+       <div>
+         <a
+           href={pdf_en.url} download>
+           PDF
+         </a>
+         &nbsp;&nbsp;
+         <em>{`${pdf_en.size} (${formatDate(download.date)})`}</em>
+         &nbsp;&nbsp;
+         <a
+           href={pdf_de.url} download>
+           PDF (german)
+         </a>
+         &nbsp;&nbsp;
+         <em>{`${pdf_de.size} (${formatDate(download.date)})`}</em>
+       </div>
+     )
+   } else {
+//   var_dump(formatDate(download.date));
+//   return(pdf_en.url + "\r\n" + pdf_de.url)
+     return (
+       <div>
+         <a
+           href={pdf_en.url} download>
+           PDF
+         </a>
+         &nbsp;&nbsp;
+         <em>{`${pdf_en.size} (${formatDate(download.date)})`}</em>
+       </div>
+     )
+   }
  }
 }
 
@@ -125,7 +167,7 @@ function Versions(props) {
                <td>
                  <a href={repoUrl}>Source Code</a>
                </td>
-               {downloads && latestPDF(downloads,'Pre-Release') > -1 && (
+               {downloads && latestPDF(downloads,'Pre-Release.en') > -1 && (
                  <td>
                    { PDF(downloads,'Pre-Release') }
                  </td>
