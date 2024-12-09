@@ -6,7 +6,7 @@ const path = require('path')
 
 const options = {
   hostname: 'api.github.com',
-  path: '/repos/icke-siegen/TitanManual/releases',
+  path: '/repos/AvolitesLtd/TitanManual/releases',
   headers: { 'User-Agent': 'Downloads Page' }
 };
 
