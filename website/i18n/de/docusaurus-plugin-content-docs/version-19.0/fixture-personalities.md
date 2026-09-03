@@ -27,9 +27,9 @@ wie z.B. die Teilgeräte (Zellen, Subfixtures) nutzen zu können.
 Auf der [Website von Avolites](http://personalities.avolites.com) sind 
 sämtliche Geräte aufgeführt, für die es eine Avolites-Personality gibt. 
 Hier sollte man als erstes nachsehen, wenn man ein bestimmtes Gerät sucht. 
-Die Adresse ist http://personalities.avolites.com
+Die Adresse ist [https://personalities.avolites.com](https://personalities.avolites.com/)
 
-[![Avolites Personalities Website](/docs/images/Avolites-Personalities-Website.png)](https://personalities.avolites.com/)
+![Avolites Personalities Website](/docs/images/Avolites-Personalities-Website.png)
 
 In der Liste links sind sämtliche verfügbaren Personalities aufgeführt.
 Mit den Eingabefeldern direkt darüber lässt sich die Liste filtern, etwa

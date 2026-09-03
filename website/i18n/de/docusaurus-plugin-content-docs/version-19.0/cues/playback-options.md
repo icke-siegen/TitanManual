@@ -138,10 +138,10 @@ Bestimmt die genaue Arbeitsweise des Faders.
 
 Einstellung | Ergebnis
 ------: | ------
-**Mode 0** | die Kanäle blenden in der vorgegebenen Zeit über, die Ausblendzeit wird dabei ignoriert. Stehen die Zeiten auf '0', so werden HTP-Kanäle direkt mit dem Fader eingeblendet, während LTP-Kanäle 'hart' umschalten.
-Mode 1 | die Kanäle blenden in der vorgegebenen Zeit ein, HTP Kanäle blenden in der vorgegebenen Ausblendzeit aus (LTP-Kanäle behalten ihre Werte). Stehen die Zeiten auf '0', so werden HTP-Kanäle direkt mit dem Fader eingeblendet, während LTP-Kanäle 'hart' umschalten..
-Mode 2 | sowohl HTP- als auch LTP-Werte folgen dem Faderwert. *Sinnvoll z.B. zur Anwendung mit Pan und Tilt etwa auf einem Catwalk oder zur manuellen Steuerung der Farben bei RGB-Lampen.*
-Mode 3 | Crossfade (Überblendung). Sämtliche Kanäle, einschließlich der Helligkeit, blenden zu den Einstellungen des neuen Cues über, alle anderen noch aktiven Cues werden ausgeblendet und deaktiviert. Wird eine anderer Cue wieder benötigt, so bringen Sie dessen Regler auf '0' und dann wieder auf den gewünschten Wert. *Sinnvoll z.B. für eine Präsentationsstimmung, mit der alle anderen Playbacks ausgefadet werden.*
+**Mode 0** | die Kanäle blenden in der vorgegebenen Zeit über, die Ausblendzeit wird dabei ignoriert. Stehen die Zeiten auf '0', so werden HTP-Kanäle direkt mit dem Fader eingeblendet, während LTP-Kanäle 'hart' umschalten. 
+Mode 1 | die Kanäle blenden in der vorgegebenen Zeit ein, HTP Kanäle blenden in der vorgegebenen Ausblendzeit aus (LTP-Kanäle behalten ihre Werte). Stehen die Zeiten auf '0', so werden HTP-Kanäle direkt mit dem Fader eingeblendet, während LTP-Kanäle 'hart' umschalten. 
+Mode 2 | sowohl HTP- als auch LTP-Werte folgen dem Faderwert. *Sinnvoll z.B. zur Anwendung mit Pan und Tilt etwa auf einem Catwalk oder zur manuellen Steuerung der Farben bei RGB-Lampen.* 
+Mode 3 | Crossfade (Überblendung). Sämtliche Kanäle, einschließlich der Helligkeit, blenden zu den Einstellungen des neuen Cues über, alle anderen noch aktiven Cues werden ausgeblendet und deaktiviert. Wird eine anderer Cue wieder benötigt, so bringen Sie dessen Regler auf '0' und dann wieder auf den gewünschten Wert. *Sinnvoll z.B. für eine Präsentationsstimmung, mit der alle anderen Playbacks ausgefadet werden.* 
 
 Die gleiche Einstellung wie im [<Keys.SoftKey>Edit Times</Keys.SoftKey>](./cue-timing.md#fade-modes)-Menu.
 

@@ -144,6 +144,7 @@ Optional kann ein Plan - oder ein sonstiges Bild - als Hintergrund eines Layouts
 4. Wählen Sie das gewünschte Bild.
 
 Mit <Keys.SoftKey>Scaling Mode</Keys.SoftKey> lässt sich festlegen, wie das Bild skaliert werden soll:
+
 - None (keine Skalierung)
 - Letterbox (Skalierung, so dass Höhe und Breite passt, mit schwarzen Rändern wenn zu klein)
 - Fill (Skalierung, so dass Höhe und Breite passt; was zu groß ist, wird abgeschnitten)

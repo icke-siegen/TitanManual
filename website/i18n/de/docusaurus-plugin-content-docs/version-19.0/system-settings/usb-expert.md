@@ -136,6 +136,7 @@ Schieben Sie nun den Bildschirmfader **Channel Level** nach oben und unten, und 
 Das Testen der LEDs unterscheidet sich etwas je nach jeweiligem Pult.
 
 **T3 und D3**
+
 - Unter **Connected Panels** wählen Sie das T3/D3 Main Board.
 - Gehen Sie rechts oben auf den Reiter **Leds**.
 - Stellen Sie **End LED value** auf 64.
@@ -145,6 +146,7 @@ Das Testen der LEDs unterscheidet sich etwas je nach jeweiligem Pult.
 - Nun müssen alle Playback-LEDs auf dem Pult aufleuchten.
 
 **Quartz und Titan Mobile**
+
 - Unter **Connected Panels** wählen Sie das Quartz Main Board bzw. Mobile Main Board.
 - Gehen Sie rechts oben auf den Reiter **Leds**.
 - Stellen Sie **End LED value** auf 56.
@@ -154,6 +156,7 @@ Das Testen der LEDs unterscheidet sich etwas je nach jeweiligem Pult.
 - Nun müssen alle Playback-LEDs auf dem Pult aufleuchten.
 
 **Tiger Touch II**
+
 - Unter **Connected Panels** wählen Sie das Touch Playback Panel 1.
 - Gehen Sie rechts oben auf den Reiter **Leds**.
 - Stellen Sie **End LED value** auf 20.
@@ -163,6 +166,7 @@ Das Testen der LEDs unterscheidet sich etwas je nach jeweiligem Pult.
 - Nun müssen alle Playback-LEDs auf dem Pult aufleuchten.
 
 **Arena**
+
 - Unter **Connected Panels** wählen Sie das Touch Playback Panel 1.
 - Gehen Sie rechts oben auf den Reiter **Leds**.
 - Stellen Sie **End LED value** auf 20.
@@ -182,6 +186,7 @@ Das Testen der LEDs unterscheidet sich etwas je nach jeweiligem Pult.
 - Nun müssen alle Playback-LEDs auf dem Pult aufleuchten.
 
 **Sapphire Touch**
+
 - Unter **Connected Panels** wählen Sie das Sapphire Program Panel 1.
 - Gehen Sie rechts oben auf den Reiter **Leds**.
 - Stellen Sie **End LED value** auf 56.
@@ -196,6 +201,7 @@ Das Testen der LEDs unterscheidet sich etwas je nach jeweiligem Pult.
 - Nun müssen alle Playback-LEDs auf dem Pult aufleuchten.
 
 **D9**
+
 - Unter **Connected Panels** wählen Sie das Diamond Encoder Panel 2.
 - Gehen Sie rechts oben auf den Reiter **Leds**.
 - Klicken Sie auf **Led Colour**, stellen die Farbe auf Rot, und klicken auf OK.

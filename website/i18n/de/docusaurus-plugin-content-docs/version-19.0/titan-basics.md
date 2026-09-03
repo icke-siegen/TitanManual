@@ -92,7 +92,7 @@ wenn Sie die **Titan PC-Suite** installiert haben. Zur Installation führen Sie
 einfach das Installationsprogramm aus; damit werden auch alle
 erforderlichen Treiber installiert.
 
-> Ab Titan v14 wird Windows 10 64 Bit vorausgesetzt. Ältere Versionen 
+> Es wird ein aktuelles Windows-Betriebssystem vorausgesetzt. Ältere Versionen 
 sowie virtuelle Maschinen werden nicht unterstützt. Empfohlen wird 
 mindestens ein i5 der 5. Generation mit 4 GB RAM. Auf [https://avolites.com/titan-pc-system-requirements](https://avolites.com/titan-pc-system-requirements/) gibt es weitere Angaben zu den Systemvoraussetzungen.
 
