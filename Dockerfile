@@ -19,7 +19,7 @@ RUN apk add --update \
 RUN fmtutil-sys --all
 
 # Fix the repository verison for the Latex packages
-RUN tlmgr option repository https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2019/tlnet-final
+RUN tlmgr option repository http://mirror.ctan.org/systems/texlive/tlnet
 
 # Install the LaTeX packages based on fixed archive above
 RUN tlmgr install \
