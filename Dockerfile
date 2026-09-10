@@ -41,6 +41,7 @@ RUN tlmgr install \
     mdframed \
     mweights \
     needspace \
+    polyglossia \
     pagecolor \
     sourcecodepro \
     titling \
