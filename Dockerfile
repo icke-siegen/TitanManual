@@ -44,6 +44,7 @@ RUN tlmgr install \
     polyglossia \
     pagecolor \
     sourcecodepro \
+    sourcesanspro \
     titling \
     ucharcat \
     ulem \
