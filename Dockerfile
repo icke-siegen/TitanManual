@@ -35,6 +35,7 @@ RUN tlmgr install \
     footnotebackref \
     framed \
     fvextra \
+    koma-script \
     letltxmacro \
     ly1 \
     mdframed \
