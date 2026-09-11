@@ -575,6 +575,7 @@ $endif$
 % error fix
 %
 \providecommand{\pandocbounded}[1]{#1}
+\newcounter{none}
 
 
 %
