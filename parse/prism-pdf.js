@@ -1,7 +1,7 @@
 const path = require('path');
 const fs = require('fs');
 const avoParse = require('./avoPrismParse')
-const { execSync } = require("child_process");
+const { execFileSync } = require("child_process");
 const { program } = require("../website/node_modules/commander");
 
 const legalPath = path.join(__dirname,"PDF/prism-legal-en.md");
@@ -423,46 +423,42 @@ function generatePDF(filePath, appName, options={}) {
   options.logoPath = options.logoPath ? options.logoPath : logoPath;
 
   console.log(`Producing PDF: ${filename}`)
+  // Pandoc 3.x: avoid deprecated/removed flags and avoid Bash-only constructs.
+  // Also avoids Windows shell escaping issues by using execFileSync with args.
+  const prettyDate = new Intl.DateTimeFormat(
+    "en-GB",
+    { day: "2-digit", month: "long", year: "numeric" }
+  ).format(new Date());
 
-  const command = `
-    DATE=$(date "+%d %B %Y")
-
-    pandoc --template "${options.templatePath}" \
-      -o "${filename}" \
-      --pdf-engine=xelatex \
-      --highlight-style kate \
-      --metadata-file "${options.headerPath}" \
-      --toc \
-      --number-sections \
-      -fmarkdown-implicit_figures \
-      --self-contained \
-      --lua-filter="${sectionNumberFilter}" \
-      -V fontsize=8pt \
-      -M date="$DATE" \
-      -M footer-center="$DATE" \
-      -M footer-left="${appName} Manual" \
-      -M title="Avolites Prism Manual" \
-      -M subtitle="${appName}" \
-      -M logo="${options.logoPath}" \
-      -V colorlinks=true \
-      -V block-headings \
-      "${filePath}"
-  `;
+  const args = [
+    "--template", options.templatePath,
+    "-o", filename,
+    "--pdf-engine=xelatex",
+    "--highlight-style", "kate",
+    "--metadata-file", options.headerPath,
+    "--toc",
+    "--number-sections",
+    "-f", "markdown-implicit_figures",
+    "--lua-filter", sectionNumberFilter,
+    "-V", "fontsize=8pt",
+    "-M", `date=${prettyDate}`,
+    "-M", `footer-center=${prettyDate}`,
+    "-M", `footer-left=${appName} Manual`,
+    "-M", "title=Avolites Prism Manual",
+    "-M", `subtitle=${appName}`,
+    "-M", `logo=${options.logoPath}`,
+    "-V", "colorlinks=true",
+    "-V", "block-headings",
+    filePath,
+  ];
 
   var hrstart = process.hrtime();
-
-  execSync(command, (error, stdout, stderr) => {
-    if (error) {
-        console.log(`error: ${error.message}`);
-        return;
-    }
-    if (stderr) {
-        console.log(`stderr: ${stderr}`);
-        return;
-    }
-
-    console.log(`stdout: ${stdout}`);
-  });
+  try {
+    execFileSync("pandoc", args, { stdio: "inherit" });
+  } catch (err) {
+    process.exitCode = 4;
+    throw new Error(`Pandoc failed while producing '${filename}':\n${err?.message || err}`);
+  }
 
   var hrend = process.hrtime(hrstart);
   console.log('PDF produced in %ds', hrend[0]);
