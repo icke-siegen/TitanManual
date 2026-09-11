@@ -1,4 +1,4 @@
-FROM pandoc/latex:3.11 as builder
+FROM pandoc/latex:2.9.1.1 as builder
 
 ENTRYPOINT ["/bin/sh", "-c"]
 
@@ -19,7 +19,7 @@ RUN apk add --update \
 RUN fmtutil-sys --all
 
 # Fix the repository verison for the Latex packages
-RUN tlmgr option repository http://mirror.ctan.org/systems/texlive/tlnet
+RUN tlmgr option repository https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2019/tlnet-final
 
 # Install the LaTeX packages based on fixed archive above
 RUN tlmgr install \
@@ -35,16 +35,14 @@ RUN tlmgr install \
     footnotebackref \
     framed \
     fvextra \
-    koma-script \
     letltxmacro \
     ly1 \
     mdframed \
     mweights \
     needspace \
-    polyglossia \
     pagecolor \
     sourcecodepro \
-    sourcesans \
+    sourcesanspro \
     titling \
     ucharcat \
     ulem \
