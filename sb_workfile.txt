@@ -1,0 +1,401 @@
+This is a temporary work file and is not to be included with the final PR.
+
+pandoc releases: https://pandoc.org/releases.html
+pandoc versions: https://mise-versions.jdx.dev/tools/pandoc
+pandoc latex docker images: https://hub.docker.com/r/pandoc/latex
+alpine linux packages: https://pkgs.alpinelinux.org/
+tlmgr readme: https://www.tug.org/texlive/doc/tlmgr.html
+texlive: https://www.tug.org/texlive/
+list of pandoc versions: https://mise-versions.jdx.dev/tools/pandoc
+
+
+dockerfile changes 10.09-26
+
+1. updated FROM from 2.9.1.1 to 3.11 
+2. changed repo to get texlive from
+3. font sourcesanspro deleted
+4. koma-script included --> LaTeX Error: File `polyglossia.sty' not found.
+5. polyglossia included --> LaTeX Error: File `sourcesanspro.sty' not found.
+6. source sans pro included again --> error
+7. changed to sourcesans --> error ! Undefined control sequence.  l.1059 \pandocbounded
+
+11.09.26
+
+8. changed back to before yesterday's changes and ran a build
+9. changed eisvogel_avo.latex, pdf.js, prism-pdf.js as indicated by Terry
+10. applied all of yesterday's changes again an ran build -- error newcounter
+11. applied  \newcounter{none} to eisvogel_avo.latex and ran build -- error Missing number, treated as zero.
+
+
+changes (dockerfile): 
+FROM pandoc/latex:2.9.1.1 as builder --> v12.22.6
+
+FROM pandoc/latex:2.16 as builder --> 
+		5.160 tlmgr: The TeX Live versions supported by the repository
+		5.160 https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2019/tlnet-final
+		5.160   (2016--2019)
+		5.160 do not include the version of the local installation
+		5.160   (2021).
+
+
+16.09.26		
+		
+RUN tlmgr option repository https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2019/tlnet-final
+
+tlmgr option repository ctan
+
+--> v12.22.6
+
+pdf-1  | Error producing PDF.
+pdf-1  | ! LaTeX Error: File `scrartcl.cls' not found.
+pdf-1  |
+pdf-1  | Type X to quit or <RETURN> to proceed,
+pdf-1  | or enter new name. (Default extension: cls)
+pdf-1  |
+pdf-1  | Enter file name:
+pdf-1  | ! Emergency stop.
+
+tlmgr install koma-script
+
+--> v12.22.6
+
+still file not found
+
+RUN texhash
+
+still file not found
+
+tlmgr install ... texlive-latex-recommended
+
+nothing working. scrartcl.cls is in package 	texmf-dist-latexrecommended which is in alpine linux since v3.22 but the container is on 3.12
+
+tested pandoc/latex:3.1.1 as builder - alpine updated to 3.16
+
+tested pandoc/latex:3.3 as builder --> node 20.15.1 but still scrartl.cls not found
+
+tlmgr update --self
+
+polyglossia.sty not found
+
+tlmgr install polyglossia
+
+Error producing PDF.
+Package pagecolor Error: Newer LaTeX format needed or older pagecolor package
+
+RUN tlmgr update --all
+
+Error producing PDF.
+Undefined control sequence.
+l.1059 \pandocbounded
+
+eisvogel_avo.latex l372ff
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
+
+LaTeX Error: Missing \begin{document}.
+
+--> Eisvogel template updaten?
+
+(the old eisvogel_avo.latex seems to be based on Eisvogel 1.4.0 or 1.5.0)
+
+replaced with eisvogel.latex from 3.5.1
+
+file sourcesans.sty not found
+
+added to tlmgr install  --> package not available
+
+removed from install, edited eisvogel_avo.latex
+
+this builds pdf!!! but with lots of missing references (which seem to work in the pdf though)
+
+however it breaks at v13-de with
+
+pdf-1  | YAML parse exception at line 1, column 5,
+pdf-1  | while scanning an anchor:
+pdf-1  | did not find expected alphabetic or numeric character
+pdf-1  | node:child_process:965
+
+edited header.yaml (one linefeed) --> no luck
+
+pdf12.0-en.md copied to pdf12.0-de.md --> same problem
+
+translated_sidebars/de and i18n/de/docusaurus-plugin-content-docs (2) version-13.0 renamed to version-3.0 and copied version-14.0 to version-13.0
+
+pdf-1  | /app/parse/pdf.js:318
+pdf-1  |     throw("No sections were found, this could be because of the section specified or there weren't any sections found in the sidebar");
+pdf-1  |     ^
+pdf-1  | No sections were found, this could be because of the section specified or there weren't any sections found in the sidebar
+pdf-1  | (Use `node --trace-uncaught ...` to show where the exception was thrown)
+
+in translated_sidebars/de/version-13.0-sidebars.json replace all version-14.0 with version-13.0
+
+pdf-1  | Producing PDF: /app/parse/output/Titan-13-0-en-2026-09-17-12-39-08.pdf
+pdf-1  | [WARNING] Deprecated: --self-contained. use --embed-resources --standalone
+pdf-1  | Error producing PDF.
+pdf-1  | ! LaTeX Error: File `lineno.sty' not found.
+
+tlmgr install lineno
+
+- does not build version-3.0
+- runs through ('exited with code 0/Done in 4613.97s)
+- produces some node warnings: 
+
+pdf-1  | PDF produced in 137s
+pdf-1  | (node:1) Warning: [next] quick-start/dmx-network-setup.md: Link to '/controlling-fixtures/changing-fixture-attributes.md#using-dmxsacn-input' not found
+pdf-1  | (Use `node --trace-warnings ...` to show where the warning was created)
+pdf-1  | (node:1) Warning: [next] titan-basics.md: Link to '/running-the-show.md/midi-dmx-or-audio-triggering' not found
+pdf-1  | (node:1) Warning: [next] patching/changing-the-patch.md: Link to '/controlling-fixtures/changing-fixture-attributes.md#using-dmxsacn-input' not found
+pdf-1  | (node:1) Warning: [next] controlling-fixtures/changing-fixture-attributes.md: Link to '/system-settings/dmx-output-mapping.md#dmx-sacn-input' not found
+pdf-1  | (node:1) Warning: [next] system-settings/dmx-output-mapping.md: Link to '/controlling-fixtures/changing-fixture-attributes.md#using-dmxsacn-input' not found
+pdf-1  | (node:1) Warning: [next] system-settings/upgrading-the-software.md: Link to '/system-settings/usb-expert.md' not found
+pdf-1  | (node:1) Warning: [19.0] quick-start/dmx-network-setup.md: Link to '/controlling-fixtures/changing-fixture-attributes.md#verwenden-von-dmxsacn-eingang' not found
+pdf-1  | (node:1) Warning: [19.0] titan-basics.md: Link to '/running-the-show.md/midi-dmx-or-audio-triggering' not found
+pdf-1  | (node:1) Warning: [19.0] patching/changing-the-patch.md: Link to '/controlling-fixtures/changing-fixture-attributes.md#verwenden-von-dmxsacn-eingang' not found
+pdf-1  | (node:1) Warning: [19.0] controlling-fixtures/changing-fixture-attributes.md: Link to '/system-settings/dmx-output-mapping.md#dmx-sacn-input' not found
+pdf-1  | (node:1) Warning: [19.0] system-settings/dmx-output-mapping.md: Link to '/controlling-fixtures/changing-fixture-attributes.md#verwenden-von-dmxsacn-eingang' not found
+pdf-1  | (node:1) Warning: [19.0] quick-start/dmx-network-setup.md: Link to '/controlling-fixtures/changing-fixture-attributes.md#using-dmxsacn-input' not found
+pdf-1  | (node:1) Warning: [19.0] titan-basics.md: Link to '/running-the-show.md/midi-dmx-or-audio-triggering' not found
+pdf-1  | (node:1) Warning: [19.0] patching/changing-the-patch.md: Link to '/controlling-fixtures/changing-fixture-attributes.md#using-dmxsacn-input' not found
+pdf-1  | (node:1) Warning: [19.0] controlling-fixtures/changing-fixture-attributes.md: Link to '/system-settings/dmx-output-mapping.md#dmx-sacn-input' not found
+pdf-1  | (node:1) Warning: [19.0] system-settings/dmx-output-mapping.md: Link to '/controlling-fixtures/changing-fixture-attributes.md#using-dmxsacn-input' not found
+pdf-1  | (node:1) Warning: [19.0] system-settings/upgrading-the-software.md: Link to '/system-settings/usb-expert.md' not found
+
+dockerfile FROM pandoc/latex:3.11 as builder (in order to go to newer node version)
+
+4.573
+4.573 tlmgr: The TeX Live versions supported by the repository
+4.573 https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2024/tlnet-final
+4.573   (2016--2024)
+4.573 do not include the version of the local installation
+
+there is no 2026/tlnet-final yet...
+
+dockerfile
+  FROM pandoc/latex:3.8 as builder
+  RUN tlmgr option repository https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2025/tlnet-final
+
+
+#16 [builder 11/15] RUN npm install --unsafe-perm=true
+#16 2.688 npm warn Unknown cli config "--unsafe-perm". This will stop working in the next major version of npm.
+#16 69.35 npm warn deprecated copy-concurrently@1.0.5: This package is no longer supported.
+#16 69.39 npm warn deprecated move-concurrently@1.0.1: This package is no longer supported.
+#16 69.41 npm warn deprecated figgy-pudding@3.5.2: This module is no longer supported.
+#16 69.42 npm warn deprecated lodash.template@4.5.0: This package is deprecated. Use https://socket.dev/npm/package/eta instead.
+#16 69.47 npm warn deprecated gulp-header@1.8.12: Removed event-stream from gulp-header
+#16 69.55 npm warn deprecated fs-write-stream-atomic@1.0.10: This package is no longer supported.
+#16 69.67 npm warn deprecated q@1.5.1: You or someone you depend on is using Q, the JavaScript Promise library that gave JavaScript developers strong feelings about promises. They can almost certainly migrate to the native JavaScript promise now. Thank you literally everyone for joining me in this bet against the odds. Be excellent to each other.
+#16 69.67 npm warn deprecated
+#16 69.67 npm warn deprecated (For a CapTP with native promises, see @endo/eventual-send and @endo/captp)
+#16 69.67 npm warn deprecated urix@0.1.0: Please see https://github.com/lydell/urix#deprecated
+#16 69.70 npm warn deprecated source-map-url@0.4.1: See https://github.com/lydell/source-map-url#deprecated
+#16 69.70 npm warn deprecated resolve-url@0.2.1: https://github.com/lydell/resolve-url#deprecated
+#16 69.86 npm warn deprecated source-map-resolve@0.5.3: See https://github.com/lydell/source-map-resolve#deprecated
+#16 71.61 npm warn deprecated @npmcli/move-file@2.0.0: This functionality has been moved to @npmcli/fs
+#16 71.62 npm warn deprecated npmlog@6.0.2: This package is no longer supported.
+#16 71.68 npm warn deprecated are-we-there-yet@3.0.1: This package is no longer supported.
+#16 71.69 npm warn deprecated coffee-script@1.12.7: CoffeeScript on NPM has moved to "coffeescript" (no hyphen)
+#16 71.82 npm warn deprecated stable@0.1.8: Modern JS already guarantees Array#sort() is a stable sort, so this library is deprecated. See the compatibility table on MDN: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort#browser_compatibility
+#16 71.83 npm warn deprecated gauge@4.0.4: This package is no longer supported.
+#16 71.85 npm warn deprecated fstream@1.0.12: This package is no longer supported.
+#16 72.23 npm warn deprecated @xmldom/xmldom@0.7.5: this version has critical issues, please update to the latest version
+#16 72.39 npm warn deprecated samsam@1.1.2: This package has been deprecated in favour of @sinonjs/samsam
+#16 72.40 npm warn deprecated formatio@1.1.1: This package is unmaintained. Use @sinonjs/formatio instead
+#16 72.82 npm warn deprecated uuid@3.4.0: uuid@10 and below is no longer supported.  For ESM codebases, update to uuid@latest.  For CommonJS codebases, use uuid@11 (but be aware this version will likely be deprecated in 2028).
+#16 72.86 npm warn deprecated har-validator@5.1.5: this library is no longer supported
+#16 72.98 npm warn deprecated trim@0.0.1: Use String.prototype.trim() instead
+#16 73.27 npm warn deprecated mini-create-react-context@0.4.1: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+#16 73.51 npm warn deprecated ua-parser-js@0.7.31: You are using an outdated version of ua-parser-js. Please update to ua-parser-js v0.7.33 / v1.0.33 / v2.0.0 (or later) to avoid ReDoS vulnerability [CVE-2022-25927](https://github.com/advisories/GHSA-fhg7-m89q-25r3)
+#16 75.28 npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+#16 75.72 npm warn deprecated boolean@3.2.0: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+#16 76.23 npm warn deprecated lodash.isequal@4.5.0: This package is deprecated. Use require('node:util').isDeepStrictEqual instead.
+#16 76.36 npm warn deprecated asar@3.2.0: Please use @electron/asar moving forward.  There is no API change, just a package name change
+#16 76.38 npm warn deprecated electron-osx-sign@0.6.0: Please use @electron/osx-sign moving forward. Be aware the API is slightly different
+#16 76.45 npm warn deprecated sinon@1.17.7: 16.1.1
+#16 76.53 npm warn deprecated tar@6.1.11: Old versions of tar are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+#16 76.93 npm warn deprecated request@2.88.2: request has been deprecated, see https://github.com/request/request/issues/3142
+#16 76.96 npm warn deprecated glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+#16 77.02 npm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+#16 77.24 npm warn deprecated @babel/polyfill@7.12.1: 🚨 This package has been deprecated in favor of separate inclusion of a polyfill and regenerator-runtime (when needed). See the @babel/polyfill docs (https://babeljs.io/docs/en/babel-polyfill) for more information.
+#16 80.51 npm warn deprecated @babel/plugin-proposal-unicode-property-regex@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-unicode-property-regex instead.
+#16 80.51 npm warn deprecated @babel/plugin-proposal-private-methods@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-private-methods instead.
+#16 80.53 npm warn deprecated @babel/plugin-proposal-private-property-in-object@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-private-property-in-object instead.
+#16 80.54 npm warn deprecated @babel/plugin-proposal-optional-catch-binding@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-optional-catch-binding instead.
+#16 80.55 npm warn deprecated @babel/plugin-proposal-optional-chaining@7.18.9: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-optional-chaining instead.
+#16 80.55 npm warn deprecated @babel/plugin-proposal-numeric-separator@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-numeric-separator instead.
+#16 80.56 npm warn deprecated @babel/plugin-proposal-logical-assignment-operators@7.18.9: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-logical-assignment-operators instead.
+#16 80.56 npm warn deprecated @babel/plugin-proposal-nullish-coalescing-operator@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-nullish-coalescing-operator instead.
+#16 80.57 npm warn deprecated @babel/plugin-proposal-json-strings@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-json-strings instead.
+#16 80.57 npm warn deprecated @babel/plugin-proposal-class-static-block@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-class-static-block instead.
+#16 80.57 npm warn deprecated @babel/plugin-proposal-dynamic-import@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-dynamic-import instead.
+#16 80.58 npm warn deprecated @babel/plugin-proposal-object-rest-spread@7.18.9: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-object-rest-spread instead.
+#16 80.58 npm warn deprecated @babel/plugin-proposal-export-namespace-from@7.18.9: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-export-namespace-from instead.
+#16 80.58 npm warn deprecated @babel/plugin-proposal-class-properties@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-class-properties instead.
+#16 80.59 npm warn deprecated @babel/plugin-proposal-async-generator-functions@7.18.10: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-async-generator-functions instead.
+#16 80.93 npm warn deprecated highlight.js@9.18.5: Support has ended for 9.x series. Upgrade to @latest
+#16 82.81 npm warn deprecated chromedriver@91.0.1: Chromedriver download url has changed. Use version 114.0.2 or newer.
+#16 83.13 npm warn deprecated rimraf@2.7.1: Rimraf versions prior to v4 are no longer supported
+#16 83.20 npm warn deprecated rimraf@2.7.1: Rimraf versions prior to v4 are no longer supported
+#16 84.48 npm warn deprecated rimraf@2.7.1: Rimraf versions prior to v4 are no longer supported
+#16 84.55 npm warn deprecated rimraf@2.7.1: Rimraf versions prior to v4 are no longer supported
+#16 84.72 npm warn deprecated raw-body@1.1.7: No longer maintained. Please upgrade to a stable version.
+#16 84.72 npm warn deprecated glob@8.0.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+#16 85.78 npm warn deprecated rimraf@2.7.1: Rimraf versions prior to v4 are no longer supported
+#16 85.81 npm warn deprecated glob@7.1.7: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+#16 86.94 npm warn deprecated uuid@8.3.2: uuid@10 and below is no longer supported.  For ESM codebases, update to uuid@latest.  For CommonJS codebases, use uuid@11 (but be aware this version will likely be deprecated in 2028).
+#16 87.31 npm warn deprecated @babel/plugin-proposal-object-rest-spread@7.12.1: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-object-rest-spread instead.
+#16 87.68 npm warn deprecated svgo@1.3.2: This SVGO version is no longer supported. Upgrade to v2.x.x.
+#16 91.80 npm warn deprecated glob@7.1.6: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+#16 94.30 npm warn deprecated svgo@1.3.2: This SVGO version is no longer supported. Upgrade to v2.x.x.
+#16 99.57 npm warn deprecated airbnb-prop-types@2.16.0: This package has been renamed to 'prop-types-tools'
+#16 105.6 npm warn deprecated core-js@2.6.12: core-js@<3.23.3 is no longer maintained and not recommended for usage due to the number of issues. Because of the V8 engine whims, feature detection in old core-js versions could cause a slowdown up to 100x even if nothing is polyfilled. Some versions have web compatibility issues. Please, upgrade your dependencies to the actual version of core-js.
+#16 262.0
+#16 262.0 added 2688 packages, and audited 2689 packages in 4m
+#16 262.0
+#16 262.0 322 packages are looking for funding
+#16 262.0   run `npm fund` for details
+#16 262.3
+#16 262.3 206 vulnerabilities (13 low, 78 moderate, 101 high, 14 critical)
+#16 262.3
+#16 262.3 To address issues that do not require attention, run:
+#16 262.3   npm audit fix
+#16 262.3
+#16 262.3 To address all issues possible (including breaking changes), run:
+#16 262.3   npm audit fix --force
+#16 262.3
+#16 262.3 Some issues need review, and may require choosing
+#16 262.3 a different dependency.
+#16 262.3
+#16 262.3 Run `npm audit` for details.
+#16 DONE 262.7s
+
+#17 [builder 12/15] RUN node -v
+#17 0.337 v24.18.1
+
+=====================================================
+17.09.26 next:
+=====================================================
+
+  + find and fix why v13-de breaks --> 18.05. done
+- compare/find differences re. eisvogel
+- try updating node
+  + git, check this in locally --> branch UpdateDockerSB, pushed to origin, 18.09.26
+- yarn audit
+- compare to Simone's update branch
+- fix pdf link problems
+- layout changes:
+  * section in header
+  * hints: blue box
+  * numbered list: red box
+  * toc: red colour
+  * table width, line breaks
+  * numbering for 4th level heading (8.8.1.4 Fader Mode)
+- check github actions - what is really in run? try it locally
+- check build/app build
+- commit to github
+- document changes again?
+- cleanup changes/added files
+- consider adding this file
+- check non-git folder: will they be automatically created?
+  \website\build   (web files, probably built by docusaurus build)
+  \website\dist    (app files, probably build by yarn app)
+  \website\node_modules  (node modules, probably built by yarn install or the likes)
+
+===================================================
+18.09.26
+
+goal: find out how to produce only some versions.
+
+reduced versions.json to only 12, 13, 14
+this builds
+- Pre Release en
+- 14-0-de
+- 13-0-de
+- 14-0-en
+- 13-0-en
+- 12-0-en
+
+- only reversed translated_sidebars/de/version-13....
+this builds
+- Pre Release en
+- 14-0-de
+- 13-0-de
+- 14-0-en
+(interrupted by me)
+
+- reversed i18/de/docusaurus-plugin-content-docs/version-13.0.json
+this builds
+- Pre Release en
+- 14-0-de
+- 13-0-de
+- 14-0-en
+(interrupted by me)
+
+- compared running (copied v14) with not running (oldv13) files, nothing obvious
+- restored files in vesion_13 but no subfolders
+pdf-1  | Error parsing YAML metadata at "/app/parse/output/pdf13.0-de.md" (line 16067, column 1):
+pdf-1  | YAML parse exception at line 1, column 5,
+pdf-1  | while scanning an anchor:
+pdf-1  | did not find expected alphabetic or numeric character
+pdf-1  | node:child_process:1000
+pdf-1  |     throw err;
+pdf-1  |     ^
+pdf-1  |
+pdf-1  | Error: Command failed:
+pdf-1  | DATE=$(date "+%d %B %Y")
+pdf-1  |
+pdf-1  | pandoc --template "/app/parse/PDF/eisvogel_avo.latex"   -o "/app/parse/output/Titan-13-0-de-2026-09-18-13-12-47.pdf"   --pdf-engine=xelatex   --highlight-style kate   --metadata-file "/app/parse/PDF/header.yaml"   --toc   --number-sections   -fmarkdown-implicit_figures   --self-contained   --lua-filter="/app/parse/PDF/lua-section-number-filter-de.lua"   -V fontsize=8pt   -M date="$DATE"   -M footer-center="$DATE"   -M footer-left="Titan 13.0 Manual"   -M title="Avolites Titan Manual"   -M subtitle="Titan 13.0"   -M logo="/app/parse/PDF/avo.png"   -V colorlinks=true   -V block-headings   -V toc-title="Inhalt"   "/app/parse/output/pdf13.0-de.md"
+pdf-1  | [WARNING] Deprecated: --highlight-style. Use --syntax-highlighting instead.
+pdf-1  | [WARNING] Deprecated: --self-contained. use --embed-resources --standalone
+pdf-1  | Error parsing YAML metadata at "/app/parse/output/pdf13.0-de.md" (line 16067, column 1):
+pdf-1  | YAML parse exception at line 1, column 5,
+pdf-1  | while scanning an anchor:
+pdf-1  | did not find expected alphabetic or numeric character
+
+
+- in titan-commands.md there were a few orphan --- (three dashes). removed and tried again
+this builds
+- Pre Release en
+- 14-0-de
+- 13-0-de
+- 14-0-en
+- 13-0-en
+- 12-0-en
+(not interrupted by me)
+
+- moved 8 folders (about...introduction) back over and tried again
+this builds
+- Pre Release en
+- 14-0-de
+- 13-0-de
+- 14-0-en
+(interrupted by me)
+
+- moved 8 folders (networking...titan-net) back over and tried again
+this builds
+- Pre Release en
+- 14-0-de
+- 13-0-de
+- 14-0-en
+- 13-0-en
+- 12-0-en
+(not interrupted by me)
+
+- re-activated all version documents
+- revert change in header.yaml (one linefeed) and tried again --> all built correctly
+
+=====================================================
+
+19.09.2026
+- committed and pushed to github (branch UpdateDockerSB)
+- successfully ran action build - https://github.com/icke-siegen/TitanManual/actions/runs/35430049846
+
+=====================================================
+
