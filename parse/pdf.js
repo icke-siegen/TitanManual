@@ -292,17 +292,26 @@ function docsVersionPath(version,lang) {
  * @return {string} The concatenated formatted files
  */
 function formatMdFiles(docsPath, sidebar, version, lang) {
+  console.log("formatMdFiles called with");
+  console.log("  docsPath: " + docsPath);
+  // console.log("  sidebar: " + JSON.stringify(sidebar, null, 2));
+  console.log("  version: " + version);
+  console.log("  lang: " + lang + "\n");
   let output = "";
   if(version == 'next') {
     docs = sidebar.docs;
   }
   else {
-    docs = sidebar[`version-${version}\/docs`];
+	console.log("Version: " + version);
+	docs = sidebar['docs'];
+	if (lang != 'en') docs = sidebar[`version-${version}\/docs`];
+	console.log("sidebar version: " + sidebar[`version-${version}\/docs`]);
   }
 
   let sectionFound = false;
   for(let index in docs) {
     let sec = docs[index].label;
+	console.log("  sec: " + sec);
     if(!section || section == sec.toLowerCase()) {
       sectionFound = true;
       for(let page of docs[index].items) {
@@ -311,7 +320,15 @@ function formatMdFiles(docsPath, sidebar, version, lang) {
       }
     }
   }
-
+  
+  if(sectionFound){
+	  console.log("section " + section + " found")
+  } else {
+	  console.log("section " + section + " not found")
+  }
+  
+  console.log("Output: " . output);
+  
   if(!sectionFound || !output) {
     // we didn't get anything
     process.exitCode = 2;
@@ -491,11 +508,11 @@ function createPDF(version,section=null, options={}) {
   console.log(`Formatting version ${version.number} - ${version.lang}`)
 
   // get the path of the sidebar file
-//  let sidebarFile = fs.readFileSync(sidebarPath(version));
-//  let sidebar = JSON.parse(sidebarFile);
+  // let sidebarFile = fs.readFileSync(sidebarPath(version));
+  // let sidebar = JSON.parse(sidebarFile);
 
   // get the path for docs of the version
-//  docsPath = docsVersionPath(version);
+  // docsPath = docsVersionPath(version);
 
   let output = '';
   if (options.legal) {
@@ -503,7 +520,7 @@ function createPDF(version,section=null, options={}) {
     output += "\n\n";
   }
 
-let sidebar = JSON.parse(fs.readFileSync(version.sidebar));
+  let sidebar = JSON.parse(fs.readFileSync(version.sidebar));
 
   // format the files
   output += formatMdFiles(version.dir, sidebar, version.number, version.lang);
