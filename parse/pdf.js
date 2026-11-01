@@ -292,26 +292,26 @@ function docsVersionPath(version,lang) {
  * @return {string} The concatenated formatted files
  */
 function formatMdFiles(docsPath, sidebar, version, lang) {
-  console.log("formatMdFiles called with");
-  console.log("  docsPath: " + docsPath);
-  // console.log("  sidebar: " + JSON.stringify(sidebar, null, 2));
-  console.log("  version: " + version);
-  console.log("  lang: " + lang + "\n");
+  //  console.log("formatMdFiles called with");
+  //..console.log("  docsPath: " + docsPath);
+  //  console.log("  sidebar: " + JSON.stringify(sidebar, null, 2));
+  //  console.log("  version: " + version);
+  //  console.log("  lang: " + lang + "\n");
   let output = "";
   if(version == 'next') {
     docs = sidebar.docs;
   }
   else {
-	console.log("Version: " + version);
+	// console.log("Version: " + version);
 	docs = sidebar['docs'];
 	if (lang != 'en') docs = sidebar[`version-${version}\/docs`];
-	console.log("sidebar version: " + sidebar[`version-${version}\/docs`]);
+	// console.log("sidebar version: " + sidebar[`version-${version}\/docs`]);
   }
 
   let sectionFound = false;
   for(let index in docs) {
     let sec = docs[index].label;
-	console.log("  sec: " + sec);
+	// console.log("  sec: " + sec);
     if(!section || section == sec.toLowerCase()) {
       sectionFound = true;
       for(let page of docs[index].items) {
@@ -320,7 +320,7 @@ function formatMdFiles(docsPath, sidebar, version, lang) {
       }
     }
   }
-  
+/*  
   if(sectionFound){
 	  console.log("section " + section + " found")
   } else {
@@ -328,7 +328,7 @@ function formatMdFiles(docsPath, sidebar, version, lang) {
   }
   
   console.log("Output: " . output);
-  
+*/  
   if(!sectionFound || !output) {
     // we didn't get anything
     process.exitCode = 2;

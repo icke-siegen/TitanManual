@@ -127,7 +127,9 @@ class avoParse {
         }
       })
     })
-	console.log("\n\nVersions from avoParse: " + JSON.stringify(versions) + "\n\n");
+
+//	console.log("\n\nVersions from avoParse: " + JSON.stringify(versions) + "\n\n");
+
     return versions
   }
 
